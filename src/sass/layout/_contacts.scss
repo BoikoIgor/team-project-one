@@ -1,11 +1,15 @@
 .contacts__wrap {
-    padding-top: 20px;
-    padding-bottom: 12px;
+    padding-top: 36px;
+    padding-bottom: 32px;
     @include tablet {
         display: flex;
         justify-content: space-between;
-        padding-top: 48px;
-        padding-bottom: 54px;
+        padding-top: 69px;
+        padding-bottom: 40px;
+    }
+    @include desktop {
+        padding-top: 64px;
+            padding-bottom: 74px;
     }
 }
 

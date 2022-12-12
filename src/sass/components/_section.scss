@@ -2,5 +2,23 @@
     padding-top: 16px;
     padding-bottom: 20px;
 
-   
+    @include tablet {
+        padding-top: 120px;
+    }
+
+    @include desktop {}
+}
+
+.section-about {
+    padding-top: 16px;
+    padding-bottom: 72px;
+
+    @include tablet {
+        padding-top: 120px;
+        padding-bottom: 96px;
+    }
+
+    @include desktop {
+        padding-bottom: 118px;
+    }
 }
