@@ -131,15 +131,11 @@ a {
 @media screen and (min-width: 1024px) {
   .container {
     max-width: 960px;
-    padding-right: 60px;
-    padding-left: 47px;
   }
 }
 @media screen and (min-width: 1280px) {
   .container {
     max-width: 1140px;
-    padding-right: 85px;
-    padding-left: 85px;
   }
 }
 
@@ -158,8 +154,9 @@ a {
   font-family: Film P3;
   font-style: 700;
   font-size: 40px;
-  color: rgb(73, 72, 72);
-  line-height: 100%;
+  color: #494848;
+  line-height: 1.075;
+  letter-spacing: 0.3em;
 }
 @media screen and (min-width: 1024px) {
   .section-title {
@@ -305,9 +302,209 @@ a {
   }
 }
 
-.test {
-  font-size: 80px;
-  background-color: red;
+.section-hero {
+  background: rgba(0, 0, 0, 0.65);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(./../images/homepage/banner-bg/banner-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .section-hero {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(./../images/homepage/banner-bg/banner-bg-2x.jpg);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .section-hero {
+    padding-top: 188px;
+    padding-bottom: 15px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(./../images/homepage/banner-bg/banner-bg-tablet.jpg);
+  }
+}
+@media screen and (min-width: 1024px) and (min-device-pixel-ratio: 2), screen and (min-width: 1024px) and (min-resolution: 192dpi), screen and (min-width: 1024px) and (min-resolution: 2dppx) {
+  .section-hero {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(./../images/homepage/banner-bg/banner-bg-tablet-2x.jpg);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section-hero {
+    padding-top: 164px;
+    padding-bottom: 64px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(./../images/homepage/banner-bg/banner-bg-desktop.jpg);
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .section-hero {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(./../images/homepage/banner-bg/banner-bg-desktop-2x.jpg);
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .container--hero {
+    position: relative;
+    padding-top: 181px;
+    padding-bottom: 20px;
+  }
+}
+
+.section-hero__title {
+  margin: 0 auto;
+  font-family: "Film P3";
+  font-size: 96px;
+  line-height: 1.07;
+  letter-spacing: 0.3em;
+  color: var(--white-color);
+  text-align: center;
+  max-width: 303px;
+}
+@media screen and (min-width: 1024px) {
+  .section-hero__title {
+    max-width: 404px;
+    font-size: 128px;
+  }
+}
+
+.section-hero__subtitle {
+  margin-bottom: 40px;
+  margin-top: 24px;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  color: var(--white-color);
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .section-hero__subtitle {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 56px;
+    margin-top: 16px;
+  }
+}
+
+.section-hero__slogan {
+  margin-bottom: 113px;
+  text-transform: uppercase;
+  display: block;
+  font-family: "Times New Roman";
+  font-size: 32px;
+  line-height: 1.15;
+  letter-spacing: 0.05em;
+  color: var(--white-color);
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .section-hero__slogan {
+    font-size: 36px;
+    line-height: 1.13;
+    margin-bottom: 137px;
+  }
+}
+
+.box-center {
+  margin-bottom: 58px;
+}
+@media screen and (min-width: 1024px) {
+  .box-center {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+}
+
+.address {
+  position: relative;
+  display: inline-block;
+  padding: 8px 8px 8px 44px;
+  border: 1px solid rgba(243, 198, 83, 0.7);
+  border-radius: 2px;
+  max-width: 210px;
+}
+@media screen and (max-width: 1023px) {
+  .address {
+    position: absolute;
+    top: 64px;
+    right: 15px;
+    padding: 8px 0px 8px 31px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .address {
+    margin-right: 137px;
+    padding: 8px 8px 8px 44px;
+    max-width: 285px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .address {
+    margin-right: 297px;
+  }
+}
+
+.address__link {
+  display: block;
+  font-family: "Montserrat-400";
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  color: #e5e5e5;
+}
+@media screen and (min-width: 1024px) {
+  .address__link {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .reception {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 58px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .reception {
+    display: inline-flex;
+    gap: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .reception {
+    gap: 60px;
+  }
+}
+
+.list-social {
+  display: flex;
+  gap: 23px;
+}
+@media screen and (min-width: 1280px) {
+  .list-social {
+    display: none;
+  }
+}
+
+.list-social__icon {
+  display: block;
+  fill: rgba(243, 198, 83, 0.7);
+}
+
+.list-social__icon--loc {
+  position: absolute;
+  top: 11px;
+  left: 6px;
+}
+@media screen and (min-width: 1024px) {
+  .list-social__icon--loc {
+    top: 13px;
+    left: 10px;
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .main-page-about-restaurant {
@@ -364,5 +561,34 @@ a {
   .main-page-second-photo-about-restaurant-text {
     font-size: 16px;
     width: 312px;
+  }
+}
+
+.section-hero--rest {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(././../images/restaurant/bg/restaurant-bg-min.jpg);
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .section-hero--rest {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(././../images/restaurant/bg/restaurant-bg-2x-min.jpg);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .section-hero--rest {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(././../images/restaurant/bg/restaurant-bg-tab-min.jpg);
+  }
+}
+@media screen and (min-width: 1024px) and (min-device-pixel-ratio: 2), screen and (min-width: 1024px) and (min-resolution: 192dpi), screen and (min-width: 1024px) and (min-resolution: 2dppx) {
+  .section-hero--rest {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(././../images/restaurant/bg/restaurant-bg-tab-2x-min.jpg);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section-hero--rest {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(././../images/restaurant/bg/restaurant-bg-desktop-min.jpg);
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .section-hero--rest {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(././../images/restaurant/bg/restaurant-bg-desktop-2x-min.jpg);
   }
 }/*# sourceMappingURL=index.css.map */
