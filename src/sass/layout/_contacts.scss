@@ -1,0 +1,74 @@
+.contacts__wrap {
+    padding-top: 20px;
+    padding-bottom: 12px;
+    @include tablet {
+        display: flex;
+    }
+}
+
+// .contacts-icon {
+
+// }
+// .list {
+//     list-style: none;
+// }
+
+.logo__section {
+    margin-bottom: 12px;
+    font-family: 'Film P3';
+    font-size: 40px;
+    line-height: 1.075;
+    letter-spacing: 0.3em;
+    color: #494848;
+}
+
+.contacts__text {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+}
+
+.contacts__text-nav {
+    font-family: 'Montserrat-500';
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--second-accent-color);
+}
+
+.contacts__link {
+    text-decoration: none;
+    font-family: 'Montserrat-400';
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+
+    color: #494848;
+}
+
+.contacts__list>li {
+    display: flex;
+}
+
+.contacts__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    border-radius: 2px;
+    // padding: 10px 32px;
+   margin-bottom: 16px;
+    // max-width: 100%;
+    // min-height: 50px;
+    text-align: center;
+    border: 0.5px solid var(--accent-color);
+
+    background: var(--white-color);
+}
+
+.contacts__box__hotel {}
+
+.contacts__box__resto {}
+
+.contacts__box__adress {}
