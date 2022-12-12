@@ -1,0 +1,78 @@
+.main-page-about-hotel {
+    background-color: var(--first-color-fon);
+}
+
+.main-page-about-hotel-container {
+    position: relative;
+}
+
+.text-reverse {
+    text-align: right;
+} 
+
+.post-text-right {
+    margin-left: 143px;
+
+
+    @include tablet {
+        margin-left: 511px;
+    }
+
+    @include desktop {
+        margin-left: 595px;
+        margin-right: 27px;
+    }
+}
+  
+.main-page-photo-about-hotel {
+    position: absolute;
+    top: 210px;
+    left: 15px;
+  
+    @include tablet {
+      top: -32px;
+      left: 65px;
+    }
+    @include desktop {
+      left: 85px;
+    }
+}
+.main-page-second-photo-about-hotel {
+    margin-top: 382px;
+    margin-bottom: 349px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  
+    @include tablet {
+        justify-content: flex-end;
+
+        margin-top: 142px;
+        gap: 48px;
+    }
+    @include desktop {
+        margin-top: 162px;
+        gap: 45px;
+    }
+}
+.main-page-second-photo-about-hotel-text {
+    font-size: 12px;
+    line-height: 1.25;
+
+    letter-spacing: 0.02em;
+    color: var(--second-accent-color);
+    width: 163px;
+  
+    @include tablet {
+      font-size: 16px;
+  
+      width: 312px;
+    }
+}
+  
+.main-page-about-hotel-slider {
+    // position: absolute;
+    // bottom: 20px;
+    // right: 85px;
+}
+  
