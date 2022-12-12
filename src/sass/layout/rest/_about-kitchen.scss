@@ -1,0 +1,58 @@
+.restaurant-about-kitchen  {
+    background-color: var(--first-color-fon);
+}
+
+.restaurant-about-kitchen-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.photo-about-kitchen {
+    position: absolute;
+    top: 210px;
+    right: 15px;
+
+    @include tablet {
+        top: -152px;
+        right: 85px;
+    }
+    @include desktop {
+        right: 85px;
+    }
+}
+.second-photo-about-kitchen {
+    margin-top: 382px;
+    margin-bottom: 349px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include tablet {
+        margin-top: 142px;
+        gap: 48px;
+    }
+    @include desktop {
+        margin-top: 162px;
+        gap: 40px;
+    }
+}
+.second-photo-about-kitchen-text {  
+    font-size: 12px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    color: var(--second-accent-color); 
+    width: 163px;   
+
+    @include tablet {
+        font-size: 16px;
+
+        width: 312px;
+    }
+}
+
+.about-kitchen-slider {
+    // position: absolute;
+    // bottom: 20px;
+    // right: 85px;
+
+}

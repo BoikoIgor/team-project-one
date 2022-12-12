@@ -1,20 +1,16 @@
 .section-title {
     margin-bottom: 12px;
     margin-top: 12px;
-
     font-family: Film P3;
     font-style: 700;
     font-size: 40px;
-
-    color: rgba(73, 72, 72, 1);
-
-    line-height: 100%;
-    
+    color: #494848;
+    line-height: 1.075;
+    letter-spacing: 0.3em;
     @include tablet {
-        margin-top: 4px;
-        margin-bottom: 24px;
-        
-        font-size: 64px;
-
+    margin-top: 4px;
+    margin-bottom: 24px;
+    font-size: 64px;
     }
+
 }
