@@ -32,6 +32,48 @@
   overflow: hidden;
 }
 
+@font-face {
+  font-family: "Montserrat-300";
+  font-style: normal;
+  font-weight: 300;
+  src: url(/src/fonts/Montserrat-Light.ttf);
+}
+@font-face {
+  font-family: "Montserrat-400";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/src/fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: "Montserrat-500";
+  font-style: normal;
+  font-weight: 500;
+  src: url(/src/fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: "Montserrat-600";
+  font-style: normal;
+  font-weight: 600;
+  src: url(/src/fonts/Montserrat-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Montserrat-700";
+  font-style: normal;
+  font-weight: 700;
+  src: url(/src/fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+  font-family: "Film P3";
+  font-style: normal;
+  font-weight: 700;
+  src: url(/src/fonts/FilmP3Bold.ttf);
+}
+body {
+  font-family: "Montserrat-600", sans-serif;
+  font-size: 12px;
+  color: var(--main-text-color);
+}
+
 p,
 h1,
 h2,
@@ -67,6 +109,14 @@ img {
   box-sizing: border-box;
 }
 
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 .container {
   width: 100%;
   padding-right: 15px;
@@ -92,6 +142,62 @@ img {
 .section {
   padding-top: 16px;
   padding-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .section {
+    padding-top: 120px;
+  }
+}
+.section-title {
+  margin-bottom: 12px;
+  margin-top: 12px;
+  font-family: Film P3;
+  font-style: 700;
+  font-size: 40px;
+  color: #494848;
+  line-height: 1.075;
+  letter-spacing: 0.3em;
+}
+@media screen and (min-width: 1024px) {
+  .section-title {
+    margin-top: 4px;
+    margin-bottom: 24px;
+    font-size: 64px;
+  }
+}
+
+.section-title-pre-text {
+  font-family: Times New Roman;
+  font-style: Regular;
+  font-size: 20px;
+  line-height: 100%;
+  color: var(--pre-title-text-color);
+}
+@media screen and (min-width: 1024px) {
+  .section-title-pre-text {
+    font-size: 32px;
+  }
+}
+
+.section-title-post-text {
+  font-style: SemiBold;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+  width: 258px;
+}
+@media screen and (min-width: 1024px) {
+  .section-title-post-text {
+    font-size: 20px;
+    width: 439px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section-title-post-text {
+    margin-top: 162px;
+    width: 518px;
+  }
 }
 
 .button {
@@ -193,5 +299,378 @@ img {
 @media screen and (min-width: 1024px) {
   .button__modal {
     min-width: 592px;
+  }
+}
+
+.section-hero {
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  background: rgba(0, 0, 0, 0.65);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(./../images/homepage/banner-bg/banner-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .section-hero {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(./../images/homepage/banner-bg/banner-bg-2x.jpg);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .section-hero {
+    padding-top: 188px;
+    padding-bottom: 15px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(./../images/homepage/banner-bg/banner-bg-tablet.jpg);
+  }
+}
+@media screen and (min-width: 1024px) and (min-device-pixel-ratio: 2), screen and (min-width: 1024px) and (min-resolution: 192dpi), screen and (min-width: 1024px) and (min-resolution: 2dppx) {
+  .section-hero {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(./../images/homepage/banner-bg/banner-bg-tablet-2x.jpg);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section-hero {
+    padding-top: 164px;
+    padding-bottom: 64px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(./../images/homepage/banner-bg/banner-bg-desktop.jpg);
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .section-hero {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(./../images/homepage/banner-bg/banner-bg-desktop-2x.jpg);
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .container--hero {
+    position: relative;
+    padding-top: 181px;
+    padding-bottom: 20px;
+  }
+}
+
+.section-hero__title {
+  margin: 0 auto;
+  font-family: "Film P3";
+  font-size: 96px;
+  line-height: 1.07;
+  letter-spacing: 0.3em;
+  color: var(--white-color);
+  text-align: center;
+  max-width: 303px;
+}
+@media screen and (min-width: 1024px) {
+  .section-hero__title {
+    max-width: 404px;
+    font-size: 128px;
+  }
+}
+
+.section-hero__subtitle {
+  margin-bottom: 40px;
+  margin-top: 24px;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  color: var(--white-color);
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .section-hero__subtitle {
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 56px;
+    margin-top: 16px;
+  }
+}
+
+.section-hero__slogan {
+  margin-bottom: 113px;
+  text-transform: uppercase;
+  display: block;
+  font-family: "Times New Roman";
+  font-size: 32px;
+  line-height: 1.15;
+  letter-spacing: 0.05em;
+  color: var(--white-color);
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .section-hero__slogan {
+    font-size: 36px;
+    line-height: 1.13;
+    margin-bottom: 137px;
+  }
+}
+
+.box-center {
+  margin-bottom: 58px;
+}
+@media screen and (min-width: 1024px) {
+  .box-center {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+}
+
+.address {
+  position: relative;
+  display: inline-block;
+  padding: 8px 8px 8px 44px;
+  border: 1px solid rgba(243, 198, 83, 0.7);
+  border-radius: 2px;
+  max-width: 210px;
+}
+@media screen and (max-width: 1023px) {
+  .address {
+    position: absolute;
+    top: 64px;
+    right: 15px;
+    padding: 8px 0px 8px 31px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .address {
+    margin-right: 137px;
+    padding: 8px 8px 8px 44px;
+    max-width: 285px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .address {
+    margin-right: 297px;
+  }
+}
+
+.address__link {
+  display: block;
+  font-family: "Montserrat-400";
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  color: #e5e5e5;
+}
+@media screen and (min-width: 1024px) {
+  .address__link {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .reception {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 58px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .reception {
+    display: inline-flex;
+    gap: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .reception {
+    gap: 60px;
+  }
+}
+
+.list-social {
+  display: flex;
+  gap: 23px;
+}
+@media screen and (min-width: 1280px) {
+  .list-social {
+    display: none;
+  }
+}
+
+.list-social__icon {
+  display: block;
+  fill: rgba(243, 198, 83, 0.7);
+}
+
+.list-social__icon--loc {
+  position: absolute;
+  top: 11px;
+  left: 6px;
+}
+@media screen and (min-width: 1024px) {
+  .list-social__icon--loc {
+    top: 13px;
+    left: 10px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.main-page-about-restaurant {
+  background-color: var(--first-color-fon);
+  position: relative;
+}
+
+.main-page-photo-about-restaurant {
+  position: absolute;
+  top: 210px;
+  right: 15px;
+}
+@media screen and (min-width: 1024px) {
+  .main-page-photo-about-restaurant {
+    top: -32px;
+    right: 112px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main-page-photo-about-restaurant {
+    right: 180px;
+  }
+}
+
+.main-page-second-photo-about-restaurant {
+  margin-top: 382px;
+  margin-bottom: 349px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .main-page-second-photo-about-restaurant {
+    margin-top: 142px;
+    gap: 48px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .main-page-second-photo-about-restaurant {
+    margin-top: 162px;
+    gap: 40px;
+  }
+}
+
+.main-page-second-photo-about-restaurant-text {
+  font-size: 12px;
+  line-height: 1.25;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  color: var(--second-accent-color);
+  width: 163px;
+}
+@media screen and (min-width: 1024px) {
+  .main-page-second-photo-about-restaurant-text {
+    font-size: 16px;
+    width: 312px;
+  }
+}
+
+.footer {
+  padding: 40px 0px 42px;
+  background-color: #0e0c07;
+}
+
+.container-footer {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 1024px) {
+  .container-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .wrap {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+  }
+}
+.wrap__logo-footer {
+  font-family: "Film P3";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.06;
+  letter-spacing: 0.3em;
+  color: #f3c653;
+}
+
+.footer-features__features-link {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #f3c653;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  margin-top: 32px;
+}
+
+.section-hero--rest {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(././../images/restaurant/bg/restaurant-bg-min.jpg);
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .section-hero--rest {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(././../images/restaurant/bg/restaurant-bg-2x-min.jpg);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .section-hero--rest {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(././../images/restaurant/bg/restaurant-bg-tab-min.jpg);
+  }
+}
+@media screen and (min-width: 1024px) and (min-device-pixel-ratio: 2), screen and (min-width: 1024px) and (min-resolution: 192dpi), screen and (min-width: 1024px) and (min-resolution: 2dppx) {
+  .section-hero--rest {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(././../images/restaurant/bg/restaurant-bg-tab-2x-min.jpg);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section-hero--rest {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(././../images/restaurant/bg/restaurant-bg-desktop-min.jpg);
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .section-hero--rest {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(././../images/restaurant/bg/restaurant-bg-desktop-2x-min.jpg);
+  }
+}
+
+.section-hero--hotel {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(././../images/hotel/bg/hotel-bg-min.jpg);
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .section-hero--hotel {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(././../images/hotel/bg/hotel-bg-2x-min.jpg);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .section-hero--hotel {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(././../images/hotel/bg/hotel-bg-tab-min.jpg);
+  }
+}
+@media screen and (min-width: 1024px) and (min-device-pixel-ratio: 2), screen and (min-width: 1024px) and (min-resolution: 192dpi), screen and (min-width: 1024px) and (min-resolution: 2dppx) {
+  .section-hero--hotel {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(././../images/hotel/bg/hotel-bg-tab-2x-min.jpg);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section-hero--hotel {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(././../images/hotel/bg/hotel-bg-desktop-min.jpg);
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .section-hero--hotel {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(././../images/hotel/bg/hotel-bg-desktop-2x-min.jpg);
   }
 }/*# sourceMappingURL=index.css.map */

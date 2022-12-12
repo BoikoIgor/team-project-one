@@ -12,6 +12,7 @@
   position: absolute;
   top: 210px;
   right: 15px;
+
   @include tablet {
     top: -32px;
     right: 85px;
@@ -48,12 +49,11 @@
   @include tablet {
     font-size: 16px;
     width: 312px;
-    }
+  }
 }
 
 .main-page-about-restaurant-slider {
-    // position: absolute;
-    // bottom: 20px;
-    // right: 85px;
-
+  // position: absolute;
+  // bottom: 20px;
+  // right: 85px;
 }

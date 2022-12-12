@@ -1,18 +1,17 @@
 .section-title-post-text {
-    font-style: SemiBold;
-    font-size: 12px;
-    line-height: 1.25;
-    letter-spacing: 2%;
-    color: var(--main-text-color);
-    width: 258px;
+  font-style: SemiBold;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  color: var(--main-text-color);
+  width: 258px;
 
-    @include tablet {
-        font-size: 20px;
-        width: 439px;
-    }
-    @include desktop {
-        margin-top: 162px;
-        width: 518px;
-    }
+  @include tablet {
+    font-size: 20px;
+    width: 439px;
+  }
+  @include desktop {
+    margin-top: 162px;
+    width: 518px;
+  }
 }
-

@@ -1,0 +1,24 @@
+// main page
+@import './header';
+@import './hero-main';
+@import './about-rest';
+@import './details-rest';
+@import './about-hotel';
+@import './details-hotel';
+@import './contacts';
+@import './footer';
+
+// Restaurant
+@import './rest/hero-rest';
+@import './rest/about-kitchen';
+@import './rest/menu';
+
+// Hotel
+@import './hotel/hero-hotel';
+@import './hotel/double-lux-room';
+@import './hotel/triple-room';
+@import './hotel/double-room';
+
+// Rooms
+@import './rooms/hero-room';
+@import './rooms/amenities';
