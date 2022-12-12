@@ -10,6 +10,7 @@
 
   @media screen and (max-width: 1024px) {
     flex-direction: column;
+
     align-items: center;
   }
 }
@@ -22,6 +23,10 @@
     justify-content: space-evenly;
   }
 
+  @media screen and (max-width: 1024px) {
+    margin-left: 59px;
+  }
+
   &__logo-footer {
     font-family: 'Film P3';
     font-style: normal;
@@ -32,12 +37,13 @@
     color: #f3c653;
   }
 }
-.features {
+
+div {
+  @media screen and (max-width: 1024px) {
+    margin-left: auto;
+  }
 }
-.footer-features {
-}
-.footer-features__features-item {
-}
+
 .footer-features__features-link {
   font-family: 'Montserrat';
   font-style: normal;
@@ -48,15 +54,14 @@
 
   color: #f3c653;
 }
-.social-networks {
-}
 .footer-social {
   display: flex;
   align-items: center;
   gap: 23px;
   margin-top: 32px;
-}
-.footer-social__social-item {
-}
-.footer-social__footer-link {
+
+  @include tablet {
+    display: inline-block;
+    margin-top: 0px;
+  }
 }
