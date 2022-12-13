@@ -68,6 +68,7 @@
   margin-top: 32px;
   min-width: 0;
   position: relative;
+  padding: 0 0 0 69px;
 }
 .slick-list {
   overflow: hidden;
@@ -78,24 +79,23 @@
 // Slider-about styles
 .slider-about .slick-arrow {
   position: absolute;
-  top: 110%;
-  left: 40%;
+  top: 120%;
+  // left: 287px;
+  width: 30px;
+  height: 16px;
+  background-size: contain;
 }
 // Arrow left
 .slider-about .slick-arrow.slick-prev {
-  // left: 0;
-  width: 30px;
-  height: 16px;
-  background: url(../images/svg/arrow-left.svg) 0 0 no-repeat;
-  background-size: contain;
+  left: 287px;
+
+  background: url(../images/svg/arrow-left.svg) 0 0 / 100% no-repeat;
 }
 // Arrow right
 .slider-about .slick-arrow.slick-next {
-  left: 55%;
-  width: 30px;
-  height: 16px;
-  background: url(../images/svg/arrow-right.svg) 0 0 no-repeat;
-  background-size: contain;
+  // left: calc (287 + 64);
+  right: 13px;
+  background: url(../images/svg/arrow-right.svg) 0 0 / 100% no-repeat;
 }
 // .main-page-about-restaurant-slider {
 //   // position: absolute;
