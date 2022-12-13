@@ -633,6 +633,41 @@ table {
   }
 }
 
+.slider-about {
+  margin-top: 32px;
+  min-width: 0;
+  position: relative;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.slider-about .slick-arrow {
+  position: absolute;
+  top: 110%;
+  left: 40%;
+}
+
+.slider-about .slick-arrow.slick-prev {
+  width: 30px;
+  height: 16px;
+  background: url(../images/svg/arrow-left.svg) 0 0 no-repeat;
+  background-size: contain;
+}
+
+.slider-about .slick-arrow.slick-next {
+  left: 55%;
+  width: 30px;
+  height: 16px;
+  background: url(../images/svg/arrow-right.svg) 0 0 no-repeat;
+  background-size: contain;
+}
+
 .contacts__wrap {
   padding-top: 36px;
   padding-bottom: 32px;

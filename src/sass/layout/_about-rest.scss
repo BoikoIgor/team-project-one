@@ -51,12 +51,10 @@
       width: 460px;
     }
   }
-
 }
 .main-page-second-photo-about-restaurant-text {
   font-size: 12px;
   line-height: 1.25;
-
   letter-spacing: 0.02em;
   color: var(--second-accent-color);
   width: 163px;
@@ -66,7 +64,39 @@
     width: 312px;
   }
 }
-
+.slider-about {
+  margin-top: 32px;
+  min-width: 0;
+  position: relative;
+}
+.slick-list {
+  overflow: hidden;
+}
+.slick-track {
+  display: flex;
+}
+// Slider-about styles
+.slider-about .slick-arrow {
+  position: absolute;
+  top: 110%;
+  left: 40%;
+}
+// Arrow left
+.slider-about .slick-arrow.slick-prev {
+  // left: 0;
+  width: 30px;
+  height: 16px;
+  background: url(../images/svg/arrow-left.svg) 0 0 no-repeat;
+  background-size: contain;
+}
+// Arrow right
+.slider-about .slick-arrow.slick-next {
+  left: 55%;
+  width: 30px;
+  height: 16px;
+  background: url(../images/svg/arrow-right.svg) 0 0 no-repeat;
+  background-size: contain;
+}
 // .main-page-about-restaurant-slider {
 //   // position: absolute;
 //   // bottom: 20px;
