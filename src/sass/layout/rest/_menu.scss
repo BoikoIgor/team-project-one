@@ -17,6 +17,7 @@
 }
 
 .menu__container {
+  width: 100%;
   @include tablet {
     padding: 0;
   }
@@ -34,8 +35,9 @@
   padding-bottom: 32px;
   @include mobile {
     font-size: 32px;
+    line-height: 1.16;
   }
-  @include tablet {
+  @include desktop {
     padding-bottom: 40px;
   }
 }
@@ -64,12 +66,21 @@
   font-family: 'Times New Roman', serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18 px;
   line-height: 1.15;
 
   color: var(--main-title-color);
 
   margin-bottom: 16px;
+  @include mobile {
+    font-size: 20px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+  @include tablet {
+    font-size: 24px;
+    line-height: 1.17;
+  }
 }
 
 .category__dish {
@@ -97,7 +108,7 @@
   width: 100%;
   font-family: 'Montserrat-500', sans-serif;
   font-style: normal;
-  font-size: 14px;
+  font-size: 12 px;
   line-height: 1.21;
   letter-spacing: 0.02em;
 
@@ -105,6 +116,14 @@
 
   margin-bottom: 4px;
   padding: 0;
+  @include mobile {
+    font-size: 14px;
+    line-height: 1.21;
+  }
+  @include desktop {
+    font-size: 16px;
+    line-height: 1.25;
+  }
 }
 
 .dish__single {
@@ -124,11 +143,14 @@
 .dish__ingredients {
   font-family: 'Montserrat-400', sans-serif;
   font-style: normal;
-  font-size: 10px;
+  font-size: 8px;
   line-height: 1.2;
   letter-spacing: 0.02em;
 
   color: var(--main-title-color);
+  @include mobile {
+    font-size: 10px;
+  }
 }
 
 .dish__weight {
@@ -187,7 +209,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 32px;
+  // margin-top: 32px;
   @include tablet {
     margin-left: auto;
     margin-right: 0;
