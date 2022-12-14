@@ -21,6 +21,9 @@
   @include tablet {
     padding: 0;
   }
+  @include desktop {
+    width: 1110px;
+  }
 }
 
 .menu__title {
@@ -48,7 +51,10 @@
   padding-bottom: 32px;
   @include tablet {
     display: flex;
-    gap: 121px;
+    gap: 140px;
+  }
+  @include desktop {
+    padding-bottom: 40px;
   }
 }
 
@@ -56,11 +62,17 @@
   @include tablet {
     width: 410px;
   }
+  @include desktop {
+    width: calc((100% - 140px) / 2);
+  }
 }
 
 .menu__dishes--second-part {
   @include tablet {
     width: 430px;
+  }
+  @include desktop {
+    width: calc((100% - 140px) / 2);
   }
 }
 
@@ -122,6 +134,9 @@
   width: 221px;
   @include tablet {
     width: 226px;
+  }
+  @include desktop {
+    width: 291px;
   }
 }
 
@@ -185,11 +200,17 @@
   @include tablet {
     padding: 0 0 0 39px;
   }
+  @include desktop {
+    padding: 0 0 0 28px;
+  }
 }
 
 .dish__weight--salad {
   @include tablet {
     padding: 0 0 0 46px;
+  }
+  @include desktop {
+    padding: 0 0 0 28px;
   }
 }
 
@@ -198,12 +219,18 @@
   @include tablet {
     padding: 0 0 0 108px;
   }
+  @include desktop {
+    padding: 0 0 0 155px;
+  }
 }
 
 .dish__weight--drinks {
   padding-left: 75px;
   @include tablet {
     padding: 0 0 0 105px;
+  }
+  @include desktop {
+    padding: 0 0 0 155px;
   }
 }
 
@@ -226,11 +253,17 @@
   @include tablet {
     padding: 0 0 0 37px;
   }
+  @include desktop {
+    padding: 0 0 0 65px;
+  }
 }
 
 .dish__price--salad {
   @include tablet {
     padding: 0 0 0 61px;
+  }
+  @include desktop {
+    padding: 0 0 0 69px;
   }
 }
 
@@ -238,11 +271,17 @@
   @include tablet {
     padding: 0 0 0 62px;
   }
+  @include tablet {
+    padding: 0 0 0 71px;
+  }
 }
 
 .dish__price--drinks {
   @include tablet {
     padding: 0 0 0 45px;
+  }
+  @include desktop {
+    padding: 0 0 0 59px;
   }
 }
 
@@ -251,10 +290,16 @@
   @include tablet {
     padding: 0 0 0 53px;
   }
+  @include desktop {
+    padding: 0 0 0 69px;
+  }
 }
 
 .dish__price--big-padding {
   padding: 0 0 0 48px;
+  @include desktop {
+    padding: 0 0 0 64px;
+  }
 }
 
 .menu__button {
