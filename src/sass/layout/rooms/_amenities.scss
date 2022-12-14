@@ -1,0 +1,114 @@
+.section-amenities {
+  background-color: var(--first-color-fon);
+}
+.container--amenities {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  @include tablet {
+    padding-top: 48px;
+    padding-bottom: 40px;
+  }
+  @include desktop {
+    padding-bottom: 48px;
+    padding-right: 113px;
+  }
+}
+.comfort-list {
+  margin-bottom: 32px;
+  @include tablet {
+    margin-bottom: 40px;
+  }
+}
+.comfort-list__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+.box-animation {
+  margin-bottom: 16px;
+}
+.comfort-list__title {
+  font-family: 'Times New Roman';
+  color: var(--text-menu-color);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.16;
+  &--first {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.15;
+  }
+}
+
+.comfort-list__text {
+  font-family: 'Montserrat-700';
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  color: var(--hotel-text-color);
+  @include tablet {
+    display: inline-block;
+    max-width: 400px;
+  }
+  &--margin {
+    @media screen and (max-width: 1023px) {
+      margin-bottom: 16px;
+    }
+    @include tablet {
+      margin-right: 80px;
+    }
+    @include desktop {
+        margin-right: 159px;
+    }
+  }
+  &--amenities {
+    @include tablet {
+      max-width: 757px;
+    }
+  }
+}
+.section-amenities__button {
+  margin-bottom: 20px;
+  width: 384px;
+  display: block;
+  background: var(--text-menu-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 25px;
+  padding: 20px 43px;
+
+  font-family: 'Montserrat-500';
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--white-color);
+  @include tablet {
+    margin-bottom: 50px;
+    margin-left: auto;
+    width: 434px;
+  }
+}
+.amenities-link {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  @include tablet {
+    justify-content: flex-end;
+  }
+
+  &__text {
+    margin-right: 12px;
+
+    font-family: 'Montserrat-500';
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    color: var(--second-accent-color);
+    @include tablet {
+      margin-right: 16px;
+      font-size: 20px;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+    }
+  }
+}
