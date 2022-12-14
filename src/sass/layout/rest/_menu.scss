@@ -16,16 +16,6 @@
   }
 }
 
-.menu__container {
-  width: 100%;
-  @include tablet {
-    padding: 0;
-  }
-  @include desktop {
-    width: 1110px;
-  }
-}
-
 .menu__title {
   font-family: 'Times New Roman', serif;
   font-style: normal;
@@ -49,18 +39,25 @@
 
 .menu__dishes {
   padding-bottom: 32px;
+  width: 100%;
+  @include mobile {
+    width: 384px;
+  }
   @include tablet {
+    width: 930px;
     display: flex;
-    gap: 140px;
+    gap: 88px;
   }
   @include desktop {
+    width: 1110px;
+    gap: 140px;
     padding-bottom: 40px;
   }
 }
 
 .menu__dishes--first-part {
   @include tablet {
-    width: 410px;
+    width: 411px;
   }
   @include desktop {
     width: calc((100% - 140px) / 2);
@@ -69,7 +66,7 @@
 
 .menu__dishes--second-part {
   @include tablet {
-    width: 430px;
+    width: 431px;
   }
   @include desktop {
     width: calc((100% - 140px) / 2);
@@ -144,7 +141,7 @@
   width: 100%;
   font-family: 'Montserrat-500', sans-serif;
   font-style: normal;
-  font-size: 12 px;
+  font-size: 12px;
   line-height: 1.21;
   letter-spacing: 0.02em;
 
@@ -162,9 +159,12 @@
   }
 }
 
-.dish__name--single:not(:last-child) {
+.dish__name--single {
   height: 17px;
-  width: 162px;
+  width: 185px;
+}
+
+.dish__name--single:not(:last-child) {
   margin-bottom: 0;
 }
 
@@ -198,10 +198,10 @@
     font-size: 14px;
   }
   @include tablet {
-    padding: 0 0 0 39px;
+    padding: 0 0 0 46px;
   }
   @include desktop {
-    padding: 0 0 0 28px;
+    padding: 0 0 0 26px;
   }
 }
 
@@ -217,20 +217,20 @@
 .dish__weight--desert {
   padding-left: 90px;
   @include tablet {
-    padding: 0 0 0 108px;
+    padding: 0 0 0 86px;
   }
   @include desktop {
-    padding: 0 0 0 155px;
+    padding: 0 0 0 132px;
   }
 }
 
 .dish__weight--drinks {
   padding-left: 75px;
   @include tablet {
-    padding: 0 0 0 105px;
+    padding: 0 0 0 85px;
   }
   @include desktop {
-    padding: 0 0 0 155px;
+    padding: 0 0 0 132px;
   }
 }
 
@@ -246,15 +246,24 @@
   padding: 0 0 0 32px;
   min-width: 94px;
   vertical-align: middle;
-  text-align: end;
+  // text-align: end;
   @include mobile {
     font-size: 14px;
   }
   @include tablet {
-    padding: 0 0 0 37px;
+    padding: 0 0 0 38px;
   }
   @include desktop {
-    padding: 0 0 0 65px;
+    padding: 0 0 0 67px;
+  }
+}
+
+.dish__price--potato {
+  @include tablet {
+    padding: 0 0 0 40px;
+  }
+  @include desktop {
+    padding: 0 0 0 70px;
   }
 }
 
@@ -269,16 +278,16 @@
 
 .dish__price--desert {
   @include tablet {
-    padding: 0 0 0 62px;
+    padding: 0 0 0 63px;
   }
-  @include tablet {
+  @include desktop {
     padding: 0 0 0 71px;
   }
 }
 
 .dish__price--drinks {
   @include tablet {
-    padding: 0 0 0 45px;
+    padding: 0 0 0 51px;
   }
   @include desktop {
     padding: 0 0 0 59px;
@@ -288,7 +297,7 @@
 .dish__price--bigger-padding {
   padding: 0 0 0 45px;
   @include tablet {
-    padding: 0 0 0 53px;
+    padding: 0 0 0 62px;
   }
   @include desktop {
     padding: 0 0 0 69px;
@@ -296,7 +305,10 @@
 }
 
 .dish__price--big-padding {
-  padding: 0 0 0 48px;
+  padding: 0 0 0 38px;
+  @include tablet {
+    padding: 0 0 0 55px;
+  }
   @include desktop {
     padding: 0 0 0 64px;
   }
@@ -306,7 +318,6 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  // margin-top: 32px;
   @include tablet {
     margin-left: auto;
     margin-right: 0;
