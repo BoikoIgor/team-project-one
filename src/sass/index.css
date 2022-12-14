@@ -181,12 +181,12 @@ table {
 @media screen and (min-width: 1024px) {
   .section-about {
     padding-top: 120px;
-    padding-bottom: 96px;
+    padding-bottom: 68px;
   }
 }
 @media screen and (min-width: 1280px) {
   .section-about {
-    padding-bottom: 118px;
+    padding-bottom: 225px;
   }
 }
 
@@ -1148,6 +1148,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
   width: 65%;
   margin-top: 28px;
   margin-left: auto;
+  background: #dadada;
+  box-shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
 }
 @media screen and (min-width: 414px) {
   .main-page-photo-about-restaurant {
@@ -1191,6 +1194,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 .main-page-second-photo-about-restaurant picture {
   width: 50%;
+  background: #dadada;
+  box-shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
 }
 @media screen and (min-width: 414px) {
   .main-page-second-photo-about-restaurant picture {
@@ -1205,6 +1211,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 @media screen and (min-width: 1280px) {
   .main-page-second-photo-about-restaurant picture {
     width: 460px;
+    box-shadow: none;
   }
 }
 
@@ -1222,37 +1229,99 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
 }
 
-.slider-about {
-  margin-top: 32px;
-  min-width: 0;
-  position: relative;
-  padding: 0 0 0 69px;
-}
-
 .slick-list {
   overflow: hidden;
 }
 
 .slick-track {
   display: flex;
+  align-items: flex-start;
 }
 
+.slider-about {
+  margin-top: 32px;
+  min-width: 0;
+  width: calc(100% - 54px);
+  height: 100%;
+  position: relative;
+  margin-left: auto;
+  right: -15px;
+  background: #dadada;
+  box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+}
+@media screen and (min-width: 1024px) {
+  .slider-about {
+    width: 428px;
+    margin: 0;
+    margin-right: 15px;
+    margin-left: auto;
+    top: -28px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .slider-about {
+    position: absolute;
+    width: 548px;
+    height: 254px;
+    top: 794px;
+    right: 0;
+  }
+}
 .slider-about .slick-arrow {
   position: absolute;
-  top: 120%;
+  top: 279px;
   width: 30px;
   height: 16px;
   background-size: contain;
 }
-
 .slider-about .slick-arrow.slick-prev {
-  left: 287px;
+  left: 220px;
   background: url(../images/svg/arrow-left-about.svg) 0 0/100% no-repeat;
 }
-
+@media screen and (min-width: 1024px) {
+  .slider-about .slick-arrow.slick-prev {
+    left: 334px;
+    top: 242;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .slider-about .slick-arrow.slick-prev {
+    top: 302;
+    left: 445;
+    right: 103px;
+  }
+}
+.slider-about .slick-arrow.slick-prev:hover {
+  background-image: url(../images/svg/arrow-left-about-gold.svg);
+}
 .slider-about .slick-arrow.slick-next {
-  right: 13px;
+  right: 18px;
   background: url(../images/svg/arrow-right-about.svg) 0 0/100% no-repeat;
+}
+@media screen and (min-width: 1024px) {
+  .slider-about .slick-arrow.slick-next {
+    right: 0;
+    top: 242;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .slider-about .slick-arrow.slick-next {
+    top: 302;
+    right: 9px;
+  }
+}
+.slider-about .slick-arrow.slick-next:hover {
+  background-image: url(../images/svg/arrow-right-about-gold.svg);
+}
+.slider-about .slider-about__item {
+  text-align: center;
+  margin-right: 24px;
+}
+@media screen and (min-width: 1024px) {
+  .slider-about .slider-about__item {
+    margin-right: 40px;
+  }
 }
 
 .details-rest {

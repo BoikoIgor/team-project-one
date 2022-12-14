@@ -10,7 +10,9 @@
   width: 65%;
   margin-top: 28px;
   margin-left: auto;
-
+  background: #dadada;
+  box-shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
   @include mobile {
     width: 246px;
   }
@@ -18,27 +20,24 @@
     position: absolute;
     top: -153px;
     right: 65px;
-
     margin-top: 0px;
-
     width: 400px;
   }
   @include desktop {
     right: 95px;
     top: -153px;
-
     width: 460px;
   }
 }
 .main-page-second-photo-about-restaurant {
   margin-top: 32px;
-
   display: flex;
   align-items: center;
   gap: 20px;
 
   @include tablet {
     margin-top: 142px;
+    // margin-bottom: 262px;
     gap: 48px;
   }
   @include desktop {
@@ -47,6 +46,9 @@
   }
   & picture {
     width: 50%;
+    background: #dadada;
+    box-shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
     @include mobile {
       width: 200px;
     }
@@ -55,13 +57,13 @@
     }
     @include desktop {
       width: 460px;
+      box-shadow: none;
     }
   }
 }
 .main-page-second-photo-about-restaurant-text {
   font-size: 12px;
   line-height: 1.25;
-
   letter-spacing: 0.02em;
   color: var(--second-accent-color);
   width: 163px;
@@ -72,36 +74,89 @@
   }
 }
 
-.slider-about {
-  margin-top: 32px;
-  min-width: 0;
-  position: relative;
-  padding: 0 0 0 69px;
-}
+// --- slider slick styles ---
+// ограничивающая оболочка
 .slick-list {
   overflow: hidden;
 }
+// лента слайдов
 .slick-track {
   display: flex;
+  align-items: flex-start;
 }
 // Slider-about styles
-.slider-about .slick-arrow {
-  position: absolute;
-  top: 120%;
-  // left: 287px;
-  width: 30px;
-  height: 16px;
-  background-size: contain;
-}
-// Arrow left
-.slider-about .slick-arrow.slick-prev {
-  left: 287px;
-
-  background: url(../images/svg/arrow-left-about.svg) 0 0 / 100% no-repeat;
-}
-// Arrow right
-.slider-about .slick-arrow.slick-next {
-  // left: calc (287 + 64);
-  right: 13px;
-  background: url(../images/svg/arrow-right-about.svg) 0 0 / 100% no-repeat;
+.slider-about {
+  margin-top: 32px;
+  min-width: 0;
+  width: calc(100% - 54px);
+  height: 100%;
+  position: relative;
+  margin-left: auto;
+  right: -15px;
+  background: #dadada;
+  // background: var(--first-color-fon);
+  box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  @include tablet {
+    // position: relative;
+    width: 428px;
+    margin: 0;
+    margin-right: 15px;
+    margin-left: auto;
+    top: -28px;
+  }
+  @include desktop {
+    position: absolute;
+    width: 548px;
+    height: 254px;
+    top: 794px;
+    right: 0;
+  }
+  & .slick-arrow {
+    position: absolute;
+    top: 279px;
+    width: 30px;
+    height: 16px;
+    background-size: contain;
+  }
+  // Arrow left
+  & .slick-arrow.slick-prev {
+    left: 220px;
+    background: url(../images/svg/arrow-left-about.svg) 0 0 / 100% no-repeat;
+    @include tablet {
+      left: 334px;
+      top: calc(194 + (96 / 2));
+    }
+    @include desktop {
+      top: calc(254 + (96 / 2));
+      left: calc(254 + 40 + 151);
+      right: 103px;
+    }
+    &:hover {
+      background-image: url(../images/svg/arrow-left-about-gold.svg);
+    }
+  }
+  // Arrow right
+  & .slick-arrow.slick-next {
+    right: 18px;
+    background: url(../images/svg/arrow-right-about.svg) 0 0 / 100% no-repeat;
+    @include tablet {
+      right: 0;
+      top: calc(194 + (96 / 2));
+    }
+    @include desktop {
+      top: calc(254 + (96 / 2));
+      right: 9px;
+    }
+    &:hover {
+      background-image: url(../images/svg/arrow-right-about-gold.svg);
+    }
+  }
+  .slider-about__item {
+    text-align: center;
+    margin-right: 24px;
+    @include tablet {
+      margin-right: 40px;
+    }
+  }
 }

@@ -13,9 +13,10 @@
   padding-bottom: 72px;
   @include tablet {
     padding-top: 120px;
-    padding-bottom: 96px;
+    // 96-28px move correction
+    padding-bottom: 68px;
   }
   @include desktop {
-    padding-bottom: 118px;
+    padding-bottom: 225px;
   }
 }
