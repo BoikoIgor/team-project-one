@@ -34,6 +34,8 @@
 
   padding-bottom: 32px;
   @include mobile {
+    padding-bottom: 40px;
+
     font-size: 32px;
     line-height: 1.16;
   }
@@ -43,21 +45,22 @@
 }
 
 .menu__dishes {
+  padding-bottom: 32px;
   @include tablet {
     display: flex;
-    gap: 88px;
+    gap: 121px;
   }
 }
 
 .menu__dishes--first-part {
   @include tablet {
-    width: calc((100% - 88px) / 2);
+    width: 410px;
   }
 }
 
 .menu__dishes--second-part {
   @include tablet {
-    width: calc((100% - 88px) / 2);
+    width: 430px;
   }
 }
 
@@ -87,12 +90,23 @@
   display: block;
   width: 100%;
   padding-bottom: 16px;
-}
-.category__dish:not(:last-child) {
-  padding-bottom: 16px;
+  @include tablet {
+    padding-bottom: 0;
+  }
 }
 
-.dish__complex {
+.category__dish:not(:last-child) {
+  @include tablet {
+    padding-bottom: 20px;
+  }
+}
+
+.category__dish--no-padding {
+  padding-bottom: 0px;
+}
+
+.dish__complex,
+.dish__single {
   display: block;
 }
 
@@ -100,8 +114,15 @@
   padding: 0 0 8px 0;
 }
 
+.dish__single:not(:last-child) {
+  padding: 0 0 11px 0;
+}
+
 .dish__wrap {
   width: 221px;
+  @include tablet {
+    width: 226px;
+  }
 }
 
 .dish__name {
@@ -124,14 +145,6 @@
     font-size: 16px;
     line-height: 1.25;
   }
-}
-
-.dish__single {
-  display: block;
-}
-
-.dish__single:not(:last-child) {
-  padding: 0 0 11px 0;
 }
 
 .dish__name--single:not(:last-child) {
@@ -169,14 +182,29 @@
   @include mobile {
     font-size: 14px;
   }
+  @include tablet {
+    padding: 0 0 0 39px;
+  }
+}
+
+.dish__weight--salad {
+  @include tablet {
+    padding: 0 0 0 46px;
+  }
 }
 
 .dish__weight--desert {
   padding-left: 90px;
+  @include tablet {
+    padding: 0 0 0 108px;
+  }
 }
 
 .dish__weight--drinks {
   padding-left: 75px;
+  @include tablet {
+    padding: 0 0 0 105px;
+  }
 }
 
 .dish__price {
@@ -195,14 +223,38 @@
   @include mobile {
     font-size: 14px;
   }
+  @include tablet {
+    padding: 0 0 0 37px;
+  }
+}
+
+.dish__price--salad {
+  @include tablet {
+    padding: 0 0 0 61px;
+  }
+}
+
+.dish__price--desert {
+  @include tablet {
+    padding: 0 0 0 62px;
+  }
+}
+
+.dish__price--drinks {
+  @include tablet {
+    padding: 0 0 0 45px;
+  }
 }
 
 .dish__price--bigger-padding {
   padding: 0 0 0 45px;
+  @include tablet {
+    padding: 0 0 0 53px;
+  }
 }
 
 .dish__price--big-padding {
-  padding: 0 0 0 40px;
+  padding: 0 0 0 48px;
 }
 
 .menu__button {
