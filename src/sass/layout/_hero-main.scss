@@ -126,6 +126,14 @@
   }
 }
 .address {
+  &:hover .address__link,
+  &:focus-within .address__link {
+    color: var(--accent-color);
+  }
+  &:hover .list-social__icon,
+  &:focus-within .list-social__icon {
+    fill: var(--accent-color);
+  }
   @media screen and(max-width: 1023px) {
     position: absolute;
     top: 64px;
@@ -149,6 +157,7 @@
   max-width: 210px;
 }
 .address__link {
+  transition: color var(--animation-link);
   display: block;
   font-family: 'Montserrat-400';
   font-size: 12px;
@@ -187,6 +196,7 @@
 .list-social__icon {
   display: block;
   fill: rgba(243, 198, 83, 0.7);
+  transition: fill var(--animation-link);
 }
 .list-social__icon--loc {
   position: absolute;
