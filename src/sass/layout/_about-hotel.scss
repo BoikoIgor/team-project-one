@@ -30,6 +30,9 @@
     width: 65%;
     margin-top: 28px;
     margin-right: auto;
+    background: #dadada;
+    box-shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
 
     @include mobile {
       width: 244px;
@@ -69,6 +72,9 @@
     }
     & picture {
         width: 50%;
+        background: #dadada;
+        box-shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
+        border-radius: 2px;
         @include mobile {
             width: 200px;
         }
@@ -94,8 +100,90 @@
     }
 }
 
-// .main-page-about-hotel-slider {
-//     position: absolute;
-//     bottom: 20px;
-//     right: 85px;
-// }
+// --- slider slick styles ---
+// ограничивающая оболочка
+.slick-list {
+  overflow: hidden;
+}
+// лента слайдов
+.slick-track {
+  display: flex;
+  align-items: flex-start;
+  transform: translate3d(0px, 0px, -831px);
+}
+// Slider-about styles
+.slider-about-left-position {
+  margin-top: 32px;
+  min-width: 0;
+  width: calc(100% - 54px);
+  height: 100%;
+  position: relative;
+  margin-right: auto;
+  left: -15px;
+  background: #dadada;
+  // background: var(--first-color-fon);
+  box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  @include tablet {
+    // position: relative;
+    width: 428px;
+    margin: 0;
+    margin-left: 15px;
+    margin-right: auto;
+    top: -28px;
+  }
+  @include desktop {
+    position: absolute;
+    width: 548px;
+    height: 254px;
+    top: 794px;
+    left: 0;
+  }
+  & .slick-arrow {
+    position: absolute;
+    top: 279px;
+    width: 30px;
+    height: 16px;
+    background-size: contain;
+  }
+  // Arrow right 
+  & .slick-arrow.slick-next {
+    right: 220px;
+    background: url(../images/svg/arrow-right-about.svg) 0 0 / 100% no-repeat;
+    @include tablet {
+      right: 334px;
+      top: calc(194 + (96 / 2));
+    }
+    @include desktop {
+      top: calc(254 + (96 / 2));
+      right: calc(254 + 40 + 151);
+      left: 103px;
+    }
+    &:hover {
+      background-image: url(../images/svg/arrow-right-about-gold.svg);
+    }
+  }
+  // Arrow left
+  & .slick-arrow.slick-prev {
+    left: 18px;
+    background: url(../images/svg/arrow-left-about.svg) 0 0 / 100% no-repeat;
+    @include tablet {
+      left: 0;
+      top: calc(194 + (96 / 2));
+    }
+    @include desktop {
+      top: calc(254 + (96 / 2));
+      left: 9px;
+    }
+    &:hover {
+      background-image: url(../images/svg/arrow-left-about-gold.svg);
+    }
+  }
+  .slider-about__item {
+    text-align: center;
+    margin-left: 24px;
+    @include tablet {
+      margin-left: 40px;
+    }
+  }
+}
