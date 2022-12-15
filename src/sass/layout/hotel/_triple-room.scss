@@ -1,1 +1,224 @@
+.room-triple {
+  width: 100%;
+  height: 100%;
+  background: var(--secondary-color-fon);
+}
 
+.room-triple__container {
+  position: relative;
+}
+
+// .background-line {
+//   width: 956px;
+//   height: 0;
+//   filter: blur(0.5px);
+//   transform-origin: 0 0;
+//   border: 1px solid #bababa66;
+//   position: absolute;
+//   transform: rotate(90deg) translateY(100%);
+// }
+
+// .background-line__left {
+//   left: 25%;
+// }
+
+// .background-line__center {
+//   left: 50%;
+// }
+
+// .background-line__right {
+//   left: 75%;
+// }
+
+.room-triple__content {
+  text-align: right;
+  padding-top: 32px;
+  padding-right: 0;
+
+  font-family: 'Times New Roman';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  color: var(--pre-title-text-color);
+
+  @include tablet {
+    text-align: right;
+    padding-top: 66px;
+    padding-right: 17px;
+
+    font-size: 32px;
+    line-height: calc(37 / 32);
+  }
+
+  @include desktop {
+    text-align: right;
+    padding-top: 72px;
+    padding-right: 57px;
+
+    font-size: 32px;
+    line-height: calc(37 / 32);
+  }
+}
+.room-triple__logo-span {
+  letter-spacing: 0;
+}
+
+.room-triple__logo {
+  text-align: right;
+  padding-top: 8px;
+  padding-right: 0;
+
+  font-family: 'Film P3';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: calc(43 / 40);
+  letter-spacing: 0.3em;
+  color: #494848;
+
+  @include tablet {
+    text-align: right;
+    padding-top: 4px;
+    padding-right: 17px;
+
+    font-size: 64px;
+    line-height: calc(69 / 64);
+  }
+
+  @include desktop {
+    text-align: right;
+    padding-top: 4px;
+    padding-right: 57px;
+
+    font-size: 64px;
+    line-height: calc(69 / 64);
+  }
+}
+
+.room-triple__title {
+  text-align: right;
+  padding-top: 32px;
+  padding-right: 0;
+
+  font-family: 'Times New Roman';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  letter-spacing: 0.05em;
+  color: var(--text-menu-color);
+
+  @include tablet {
+    padding-top: 62px;
+    padding-right: 43px;
+    margin-left: auto;
+
+    font-size: 30px;
+    line-height: calc(34 / 30);
+  }
+
+  @include desktop {
+    padding-top: 72px;
+    padding-right: 57px;
+    padding-left: auto;
+
+    font-size: 36px;
+    line-height: calc(41 / 36);
+  }
+}
+
+.room-triple__description-wrap {
+  display: block;
+
+  padding-top: 12px;
+  margin-left: 83px;
+  margin-right: 59px;
+
+  @include tablet {
+    display: block;
+    width: 400px;
+    padding-top: 16px;
+    margin-right: 20px;
+    margin-left: auto;
+  }
+
+  @include desktop {
+    display: block;
+    width: 400px;
+    padding-top: 24px;
+    margin-right: 110px;
+    margin-left: auto;
+  }
+}
+
+.room-triple__description {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(15 / 12);
+  letter-spacing: 0.02em;
+  color: #5f5f5f;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: calc(20 / 16);
+  }
+
+  @include desktop {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    color: #7a7a7a;
+  }
+}
+
+.room-triple__photo {
+  width: 244px;
+  position: absolute;
+  top: 286px;
+  left: 15px;
+  background: #dadada;
+  box-shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+
+  @include tablet {
+    width: 400px;
+    top: -32px;
+    left: 65px;
+  }
+
+  @include desktop {
+    width: 460px;
+    top: -32px;
+    left: 110px;
+  }
+}
+
+.room-triple__button-wrap {
+  padding-bottom: 32px;
+  margin-top: 652px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  @include tablet {
+    margin-left: auto;
+    margin-top: 210px;
+    padding-bottom: 145px;
+    justify-content: start;
+    align-items: flex-start;
+  }
+
+  @include desktop {
+    margin-left: auto;
+    margin-top: 260px;
+    padding-bottom: 182px;
+    justify-content: start;
+    align-items: flex-start;
+  }
+}
