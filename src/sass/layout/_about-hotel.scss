@@ -1,103 +1,102 @@
 .main-page-about-hotel {
-    background-color: var(--first-color-fon);
+  background-color: var(--first-color-fon);
 }
 
 .main-page-about-hotel-container {
-    width: 100%;
-    height: 100%;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .text-reverse {
-    text-align: right;
-} 
+  text-align: right;
+}
 
 .post-text-right {
-    margin-left: auto;
-    width: 242px;
+  margin-left: auto;
+  width: 242px;
 
+  @include tablet {
+    width: 419px;
+  }
 
-    @include tablet {
-        width: 419px;
-    }
-
-    @include desktop {
-        width: 488px;
-    }
+  @include desktop {
+    width: 488px;
+  }
 }
 
 .main-page-photo-about-hotel {
-    width: 65%;
-    margin-top: 28px;
-    margin-right: auto;
+  width: 65%;
+  margin-top: 28px;
+  margin-right: auto;
+  background: #dadada;
+  box-shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+
+  @include mobile {
+    width: 244px;
+  }
+  @include tablet {
+    position: absolute;
+    top: -153px;
+    left: 65px;
+
+    margin-top: 0px;
+
+    width: 400px;
+  }
+  @include desktop {
+    left: 95px;
+    top: -153px;
+
+    width: 460px;
+  }
+}
+.main-page-second-photo-about-hotel {
+  margin-top: 32px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  @include tablet {
+    justify-content: flex-end;
+
+    margin-top: 142px;
+    gap: 48px;
+  }
+  @include desktop {
+    margin-top: 162px;
+    gap: 45px;
+  }
+  & picture {
+    width: 50%;
     background: #dadada;
     box-shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
     border-radius: 2px;
-
     @include mobile {
-      width: 244px;
+      width: 200px;
     }
     @include tablet {
-      position: absolute;
-      top: -153px;
-      left: 65px;
-  
-      margin-top: 0px;
-  
-      width: 400px;
+      width: 350px;
     }
     @include desktop {
-      left: 95px;
-      top: -153px;
-
       width: 460px;
     }
-}
-.main-page-second-photo-about-hotel {
-    margin-top: 32px;
-
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
-    @include tablet {
-        justify-content: flex-end;
-
-        margin-top: 142px;
-        gap: 48px;
-    }
-    @include desktop {
-        margin-top: 162px;
-        gap: 45px;
-    }
-    & picture {
-        width: 50%;
-        background: #dadada;
-        box-shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
-        border-radius: 2px;
-        @include mobile {
-            width: 200px;
-        }
-        @include tablet {
-            width: 350px;
-        }
-        @include desktop {
-            width: 460px;
-        }
-    }
+  }
 }
 .main-page-second-photo-about-hotel-text {
-    font-size: 12px;
-    line-height: 1.25;
+  font-size: 12px;
+  line-height: 1.25;
 
-    letter-spacing: 0.02em;
-    color: var(--second-accent-color);
-    width: 163px;
+  letter-spacing: 0.02em;
+  color: var(--second-accent-color);
+  width: 163px;
 
-    @include tablet {
-      font-size: 16px;
-      width: 312px;
-    }
+  @include tablet {
+    font-size: 16px;
+    width: 312px;
+  }
 }
 
 // --- slider slick styles ---
@@ -146,7 +145,7 @@
     height: 16px;
     background-size: contain;
   }
-  // Arrow right 
+  // Arrow right
   & .slick-arrow.slick-next {
     right: 220px;
     background: url(../images/svg/arrow-right-about.svg) 0 0 / 100% no-repeat;
@@ -159,7 +158,8 @@
       right: calc(254 + 40 + 151);
       left: 103px;
     }
-    &:hover {
+    &:hover,
+    &:focus-within {
       background-image: url(../images/svg/arrow-right-about-gold.svg);
     }
   }
@@ -175,7 +175,8 @@
       top: calc(254 + (96 / 2));
       left: 9px;
     }
-    &:hover {
+    &:hover,
+    &:focus-within {
       background-image: url(../images/svg/arrow-left-about-gold.svg);
     }
   }
