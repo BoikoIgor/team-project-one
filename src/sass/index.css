@@ -822,12 +822,6 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .header__logo-navigation {
     font-size: 40px;
     max-width: 127px;
-    /*margin-right: 87px;*/
-  }
-}
-@media screen and (min-width: 1280px) {
-  .header__logo-navigation {
-    /*margin-right: 96px;*/
   }
 }
 
