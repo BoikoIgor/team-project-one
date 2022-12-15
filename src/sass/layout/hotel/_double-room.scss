@@ -8,28 +8,6 @@
   position: relative;
 }
 
-// .background-line {
-//   width: 100%;
-//   height: 0;
-//   filter: blur(0.5px);
-//   transform-origin: 0 0;
-//   border: 1px solid #bababa66;
-//   position: absolute;
-//   transform: rotate(90deg) translateY(100%);
-// }
-
-// .background-line__left {
-//   left: 25%;
-// }
-
-// .background-line__center {
-//   left: 50%;
-// }
-
-// .background-line__right {
-//   left: 75%;
-// }
-
 .room-double__content {
   padding-top: 32px;
   padding-left: 0;
@@ -173,20 +151,9 @@
     left: 640px;
   }
 }
-
-// .room-doublelux__button {
-//   display: block;
-
-//   margin-left: auto;
-//   margin-right: auto;
-// }
-// .room-doublelux__button-prices {
-//   display: block;
-//   margin-top: 16px;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
-
+.room-double__button a {
+  color: var(--accent-color);
+}
 .room-double__button-wrap {
   padding-bottom: 32px;
   margin-top: 652px;

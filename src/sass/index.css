@@ -2961,6 +2961,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
 }
 
+.room-doublelux__button a {
+  color: var(--accent-color);
+}
+
 .room-doublelux__button-wrap {
   padding-bottom: 32px;
   margin-top: 652px;
@@ -3170,6 +3174,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
 }
 
+.room-triple__button a {
+  color: var(--accent-color);
+}
+
 .room-triple__button-wrap {
   padding-bottom: 32px;
   margin-top: 652px;
@@ -3352,6 +3360,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
     top: -33px;
     left: 640px;
   }
+}
+
+.room-double__button a {
+  color: var(--accent-color);
 }
 
 .room-double__button-wrap {

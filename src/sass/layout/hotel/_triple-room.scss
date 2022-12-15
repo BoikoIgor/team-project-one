@@ -8,28 +8,6 @@
   position: relative;
 }
 
-// .background-line {
-//   width: 956px;
-//   height: 0;
-//   filter: blur(0.5px);
-//   transform-origin: 0 0;
-//   border: 1px solid #bababa66;
-//   position: absolute;
-//   transform: rotate(90deg) translateY(100%);
-// }
-
-// .background-line__left {
-//   left: 25%;
-// }
-
-// .background-line__center {
-//   left: 50%;
-// }
-
-// .background-line__right {
-//   left: 75%;
-// }
-
 .room-triple__content {
   text-align: right;
   padding-top: 32px;
@@ -196,7 +174,9 @@
     left: 110px;
   }
 }
-
+.room-triple__button a {
+  color: var(--accent-color);
+}
 .room-triple__button-wrap {
   padding-bottom: 32px;
   margin-top: 652px;

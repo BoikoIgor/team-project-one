@@ -12,16 +12,26 @@ $('.fade').slick({
 
 // Slider for two images gallery
 $('.fade2').slick({
-  // dots: false,
   adaptiveHeight: true,
   infinite: true,
   speed: 500,
   slidesToShow: 2,
-  // fade: true,
   cssEase: 'linear',
   autoplay: true,
   adaptiveHeight: true,
   waitForAnimate: false,
-  // centerMode: true,
+  variableWidth: true,
+});
+
+// Slider for two images gallery
+$('.fade2r').slick({
+  adaptiveHeight: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 2,
+  cssEase: 'linear',
+  autoplay: false,
+  adaptiveHeight: true,
+  waitForAnimate: false,
   variableWidth: true,
 });
