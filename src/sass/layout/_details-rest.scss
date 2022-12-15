@@ -1,5 +1,6 @@
 .details-rest {
   background-color: var(--first-color-fon);
+  padding-top: 0px;
 }
 .container-details-rest {
   max-width: 414px;
@@ -29,7 +30,7 @@
   }
   @include tablet {
     max-width: 1024px;
-    padding: 48px 47px 96px;
+    padding: 48px 47px 94px;
     background-image: linear-gradient(
         to right,
         rgba(0, 0, 0, 0.65),
@@ -49,7 +50,7 @@
   }
   @include desktop {
     max-width: 1280px;
-    padding: 48px 85px 96px;
+    padding: 48px 85px 94px;
     background-image: linear-gradient(
         to right,
         rgba(0, 0, 0, 0.65),
