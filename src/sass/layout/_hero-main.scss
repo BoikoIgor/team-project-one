@@ -1,8 +1,12 @@
 .section-hero {
-  max-width: 1280px;
+  background: var(--first-color-fon);
+}
+.container-hero {
+  max-width: 414px;
   margin-right: auto;
   margin-left: auto;
-  background: rgba(0, 0, 0, 0.65);
+  padding: 181px 15px 15px;
+
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-image: linear-gradient(
       to right,
@@ -22,8 +26,8 @@
       url(./../images/homepage/banner-bg/banner-bg-2x.jpg);
   }
   @include tablet {
-    padding-top: 188px;
-    padding-bottom: 15px;
+    max-width: 1024px;
+    padding: 188px 47px 15px;
     background-image: linear-gradient(
         to right,
         rgba(0, 0, 0, 0.65),
@@ -40,8 +44,8 @@
     }
   }
   @include desktop {
-    padding-top: 164px;
-    padding-bottom: 64px;
+    max-width: 1280px;
+    padding: 164px 85px 64px;
     background-image: linear-gradient(
         to right,
         rgba(0, 0, 0, 0.65),
@@ -57,8 +61,6 @@
         url(./../images/homepage/banner-bg/banner-bg-desktop-2x.jpg);
     }
   }
-}
-.container--hero {
   @media screen and(max-width: 1023px) {
     position: relative;
     padding-top: 181px;
