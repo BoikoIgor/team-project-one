@@ -1,4 +1,7 @@
 .header {
+  position: relative;
+}
+.container-header {
   position: absolute;
   width: 100%;
   left: 0;
@@ -8,10 +11,16 @@
 }
 
 .menu {
+  @media screen and (max-width: 413px) {
+    width: 100%;;
+  }
   display: flex;
   align-items: center;
 }
 .header__logo {
+  @media screen and (max-width: 413px) {
+    margin-right: 0px;
+  }
   padding-top: 16px;
   max-width: 114px;
   margin-right: 52px;
@@ -28,6 +37,9 @@
   }
 
   &-navigation {
+    @media screen and (max-width: 413px) {
+    font-size: 30px;
+  }
     font-family: 'Film P3';
     font-style: normal;
     font-size: 36px;
@@ -43,6 +55,9 @@
   }
 }
 .menu__navigation {
+  @media screen and (max-width: 413px) {
+    margin-left: auto;
+  }
   margin-top: 0;
 }
 
@@ -52,6 +67,9 @@
 }
 
 .menu__link {
+  @media screen and (max-width: 413px) {
+    margin-right: 2px;
+  }
   font-family: 'Montserrat-500';
   font-style: normal;
   font-size: 16px;
@@ -68,6 +86,11 @@
 }
 
 .menu__item {
+  @media screen and (max-width: 413px) {
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
   display: flex;
   align-items: center;
   margin-top: 0;
@@ -92,6 +115,9 @@
   }
 }
 .contact {
+  @media screen and (max-width: 413px) {
+    margin-right: 0px;
+  }
   margin-right: 26px;
   @media screen and (min-width: 1024px) {
     margin-right: 72px;
