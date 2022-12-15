@@ -1,7 +1,7 @@
-<div class="backdrop" data-modal>
-  <div class="modal" data-modal-open>
-    <button type="button" class="modal__close" data-modal-close>
-      <svg class="modal__close-icon" width="24" height="24">
+<div class="overlay js-overlay-modal">
+  <div class="modal" data-modal="3">
+    <button type="button" class="modal__close">
+      <svg class="modal__close-icon js-modal-close" width="24" height="24">
         <use href="/src/images/symbol-defs.svg#icon-close-black"></use>
       </svg>
     </button>
@@ -33,14 +33,14 @@
           <div class="class__field">
           <label class="class__label" for="nights">Кількість ночей</label>
           <div class="class__wrap">
-            <input class="class__select" type="number" name="nights" placeholder="1" min="1" max="365" step="1"/>
+            <input class="class__select" type="number" name="night" id="night" placeholder="1" min="1" max="365" step="1"/>
           </div>
         </div>
 
           <div class="class__field">
           <label class="class__label" for="price">грн</label>
           <div class="class__wrap">
-            <input class="class__select" type="text" name="price" placeholder="1000" required id="price" required />
+            <input class="class__select" type="number" id="total" name="total" placeholder="1000" readonly/>
           </div>
         </div>
 
