@@ -1,0 +1,57 @@
+<div class="overlay js-overlay-modal">
+  <div class="modal" data-modal="3">
+    <button type="button" class="modal__close">
+      <svg class="modal__close-icon js-modal-close" width="24" height="24">
+        <use href="/src/images/symbol-defs.svg#icon-close-black"></use>
+      </svg>
+    </button>
+
+    <form class="modal__room-form">
+
+      <p class="modal__room-title">ЦІНИ НА НОМЕР</p>
+
+      <div class="modal__room-wrap">
+
+        <div class=""> 
+
+          <div class="class__field category__field"> <!-- modal__field -->
+              <label class="class__label class" for="room-class">Категорія номеру</label>
+              <div class="class__wrap">
+                <select class="category" id="room-class" name="number-of-guests">
+                  <option class="class__text" value="Двомісний люкс">Двомісний люкс</option>
+                  <option class="class__text" value="Двомісний">Двомісний</option>
+                  <option class="class__text" value="Трьохмісний">Трьохмісний</option>
+                </select>
+            </div>
+
+          </div>
+
+          </div>
+
+          <div class="total__wrap">
+
+          <div class="class__field">
+          <label class="class__label" for="nights">Кількість ночей</label>
+          <div class="class__wrap">
+            <input class="class__select" type="number" name="night" id="night" placeholder="1" min="1" max="365" step="1"/>
+          </div>
+        </div>
+
+          <div class="class__field">
+          <label class="class__label" for="price">грн</label>
+          <div class="class__wrap">
+            <input class="class__select" type="number" id="total" name="total" placeholder="1000" readonly/>
+          </div>
+        </div>
+
+        </div>
+
+        </div>
+
+
+      <button class="modal__room-submit" type="submit">Забронювати номер</button>
+
+    </form>
+
+  </div>
+</div>
