@@ -76,6 +76,10 @@
   height: 40px;
 }
 .slick-prev.slick-arrow {
+  &:hover,
+  &:focus-within {
+    background-image: url(../images/arrow-left-dark.svg);
+  }
   background-image: url(../images/arrow-left.svg);
   left: 15px;
   z-index: 9;
@@ -87,8 +91,13 @@
   }
 }
 .slick-next.slick-arrow {
+  &:hover,
+  &:focus-within {
+    background-image: url(../images/arrow-right-dark.svg);
+  }
   background-image: url(../images/arrow-right.svg);
   right: 15px;
+
   @include tablet {
     right: 47px;
   }
@@ -102,11 +111,13 @@
 }
 
 .container--hroom {
+  padding-bottom: 14px;
   padding-top: 483px;
   position: relative;
+
   @include tablet {
-    padding-bottom: 20px;
     padding-top: 468px;
+    padding-bottom: 20px;
   }
   @include desktop {
     padding-bottom: 48px;
@@ -155,6 +166,7 @@
     max-width: 400px;
   }
 }
+
 .address--room {
   @include tablet {
     margin-right: 41px;
@@ -163,6 +175,7 @@
     display: none;
   }
 }
+
 .list-social--room {
   @media screen and (max-width: 1023px) {
     flex-direction: column;
