@@ -26,6 +26,8 @@
   color: var(--main-title-color);
 
   padding-bottom: 32px;
+
+  text-transform: uppercase;
   @include mobile {
     padding-bottom: 40px;
 
@@ -78,7 +80,7 @@
   font-family: 'Times New Roman', serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 18 px;
+  font-size: 18px;
   line-height: 1.15;
 
   color: var(--main-title-color);
@@ -121,10 +123,19 @@
 
 .dish__complex:not(:last-child) {
   padding: 0 0 8px 0;
+  @include desktop {
+    padding-bottom: 12px;
+  }
 }
 
 .dish__single:not(:last-child) {
   padding: 0 0 11px 0;
+  @include tablet {
+    padding-bottom: 8px;
+  }
+  @include desktop {
+    padding-bottom: 9px;
+  }
 }
 
 .dish__wrap {
@@ -160,7 +171,6 @@
 }
 
 .dish__name--single {
-  height: 17px;
   width: 185px;
 }
 
@@ -178,6 +188,21 @@
   color: var(--main-title-color);
   @include mobile {
     font-size: 10px;
+  }
+  @include tablet {
+    width: 211px;
+  }
+  @include desktop {
+    width: 262px;
+  }
+}
+
+.dish__ingredients--bigger-width {
+  @include tablet {
+    width: 225px;
+  }
+  @include desktop {
+    width: 257px;
   }
 }
 
@@ -215,9 +240,9 @@
 }
 
 .dish__weight--desert {
-  padding-left: 90px;
+  padding-left: 62px;
   @include tablet {
-    padding: 0 0 0 86px;
+    padding: 0 0 0 82px;
   }
   @include desktop {
     padding: 0 0 0 132px;
@@ -225,7 +250,7 @@
 }
 
 .dish__weight--drinks {
-  padding-left: 75px;
+  padding-left: 53px;
   @include tablet {
     padding: 0 0 0 85px;
   }
@@ -278,7 +303,7 @@
 
 .dish__price--desert {
   @include tablet {
-    padding: 0 0 0 63px;
+    padding: 0 0 0 67px;
   }
   @include desktop {
     padding: 0 0 0 71px;
