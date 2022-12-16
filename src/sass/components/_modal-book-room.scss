@@ -1,4 +1,4 @@
-.backdrop {
+.backdrop__room {
   height: 100%;
   width: 100%;
   top: 0;
@@ -11,14 +11,14 @@
     visibility: hidden;
     pointer-events: none;
 
-    & .modal {
+    & .modal__room {
       transform: translate(-50%, -50%);
       border-radius: 50%;
     }
   }
 }
 
-.modal {
+.modal__room {
   background-color: var(--first-color-fon);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
@@ -32,7 +32,7 @@
     max-width: 712px;
   }
 
-  &__close {
+  &-close {
     background-color: transparent;
     position: absolute;
     top: 16px;
@@ -50,7 +50,7 @@
     }
   }
 
-  &__title {
+  &-title {
     font-family: 'Times New Roman';
     font-weight: 700;
     font-size: 24px;
@@ -59,45 +59,46 @@
     color: var(--text-menu-color);
     text-align: center;
     margin-top: 60px;
+    text-transform: uppercase;
   }
 
-  &__form {
+  &-form {
     margin: 40px 15px;
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      gap: 20px;
+    }
 
     @include tablet {
       margin: 36px 60px 60px 60px;
     }
   }
 
-  &__user-wrap,
-  &__times-wrap {
+  &-user-wrap,
+  &-times-wrap {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
     @include tablet {
       display: flex;
+      flex-direction: row;
       gap: 16px;
     }
   }
 
-  &__user-wrap {
-    margin-bottom: 28px;
-  }
 
-  &__field {
+  &-field {
     display: flex;
     flex-direction: column-reverse;
     gap: 8px;
-
-    &:not(:last-child) {
-      margin-bottom: 20px;
-
-      @include tablet {
-        margin-bottom: 0;
-      }
-    }
   }
 
-  &__input,
-  &__select {
+  &-input,
+  &-select {
     width: 384px;
     height: 54px;
     border: 1px solid var(--second-accent-color);
@@ -124,7 +125,9 @@
     }
   }
 
-  &__select-wrap {
+  &-select-wrap {
+    margin-top: 20px;
+    margin-bottom: 20px;
 
     @include tablet {
       display: flex;
@@ -132,7 +135,7 @@
     }
   }
 
-  &__select {
+  &-select {
     height: 64px;
     padding: 18px 25px 22px 12px;
 
@@ -141,7 +144,7 @@
     }
   }
 
-  &__label {
+  &-label {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
@@ -157,7 +160,7 @@
     }
   }
 
-  &__input-icon {
+  &-input-icon {
     appearance: none;
 
     &::after {
@@ -173,8 +176,8 @@
     }
   }
 
-  &__user-wrap,
-  &__times-wrap {
+  &-user-wrap,
+  &-times-wrap {
 
     @include tablet {
       display: flex;
@@ -182,15 +185,7 @@
     }
   }
 
-  &__user-wrap {
-    margin-bottom: 28px;
-  }
-
-  &__times-wrap {
-    margin-top: 28px;
-  }
-
-  &__submit {
+  &-submit {
     width: 384px;
     height: 64px;
 
@@ -219,7 +214,7 @@
 
 .input {
 
-  &__text {
+  &__room-text {
     font-family: 'Times New Roman';
     font-style: normal;
     font-weight: 700;

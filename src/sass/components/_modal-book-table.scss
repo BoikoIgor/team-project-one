@@ -1,4 +1,4 @@
-.backdrop {
+.overlay {
   height: 100%;
   width: 100%;
   top: 0;
@@ -11,248 +11,241 @@
     visibility: hidden;
     pointer-events: none;
 
-    & .modal {
+    & .modal__table {
       transform: translate(-50%, -50%);
       border-radius: 50%;
     }
   }
 }
 
-.modal {
-  background-color: var(--first-color-fon);
-  box-shadow:
-    0px 1px 3px rgba(0, 0, 0, 0.12),
-    0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 2px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  /* bottom: 50%; */
-  transform: translate(-50%, -50%);
-
-  @include tablet {
-    max-width: 712px;
-  }
-
-  &__close {
-    background-color: transparent;
+.modal__table {
+    background-color: var(--first-color-fon);
+    box-shadow:
+      0px 1px 3px rgba(0, 0, 0, 0.12),
+      0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
     position: absolute;
-    top: 16px;
-    right: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    fill: var(--main-title-color);
-    border: 0;
-
-    &:hover,
-    &:focus {
-      fill: var(--accent-color);
-    }
-  }
-
-  &__title {
-    font-family: 'Times New Roman';
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 1.16;
-    letter-spacing: .05em;
-    color: var(--text-menu-color);
-    text-align: center;
-    margin-top: 60px;
-  }
-
-  &__form {
-    margin: 40px 15px 60px 15px;
+    top: 50%;
+    left: 50%;
+    /* bottom: 50%; */
+    transform: translate(-50%, -50%);
 
     @include tablet {
-      margin: 36px 60px 60px 60px;
+      max-width: 712px;
     }
-  }
 
-  &__form-wrap {
-
-    @include tablet {
+    &-close {
+      background-color: transparent;
+      position: absolute;
+      top: 16px;
+      right: 16px;
       display: flex;
-      gap: 16px;
-    }
-  }
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      fill: var(--main-title-color);
+      border: 0;
 
-  &__user-wrap,
-  &__times-wrap {
-
-    @include tablet {
-      display: flex;
-      gap: 16px;
-    }
-  }
-
-  &__field {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 8px;
-
-    &:not(:last-child) {
-      margin-bottom: 20px;
-
-      @include tablet {
-        margin-bottom: 0;
+      &:hover,
+      &:focus {
+        fill: var(--accent-color);
       }
     }
-  }
 
-  &__input,
-  &__select {
-    width: 384px;
-    height: 54px;
-    border: 1px solid var(--second-accent-color);
-    font-family: 'Times New Roman';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.15;
-    letter-spacing: .05em;
-    color: var(--placeholder-color);
-    padding: 17px 24px 17px 12px;
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    cursor: pointer;
-    position: relative;
-    appearance: none;
-
-    @include tablet {
-      width: 288px;
-      height: 64px;
+    &-title {
+      font-family: 'Times New Roman';
+      font-weight: 700;
       font-size: 24px;
       line-height: 1.16;
+      letter-spacing: .05em;
+      color: var(--text-menu-color);
+      text-align: center;
+      margin-top: 60px;
+      text-transform: uppercase;
+    }
+
+    &-form {
+      margin: 40px 15px 60px 15px;
+
+      @include tablet {
+        margin: 36px 60px 60px 60px;
+      }
+    }
+
+    &-form-wrap {
+
+      @include tablet {
+        display: flex;
+        gap: 16px;
+      }
+    }
+
+    &-user-wrap,
+    &-select-wrap {
+
+      @include tablet {
+        display: flex;
+        gap: 16px;
+      }
+    }
+
+    &-field {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 8px;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+
+        @include tablet {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-input,
+    &-select {
+      width: 384px;
+      height: 54px;
+      border: 1px solid var(--second-accent-color);
+      font-family: 'Times New Roman';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.15;
+      letter-spacing: .05em;
+      color: var(--placeholder-color);
+      padding: 17px 24px 17px 12px;
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      cursor: pointer;
+      position: relative;
+      appearance: none;
+
+      @include tablet {
+        width: 288px;
+        height: 64px;
+        font-size: 24px;
+        line-height: 1.16;
+      }
+    }
+
+    &-select {
+      height: 54px;
+
+      @include tablet {
+        height: 64px;
+        padding: 18px 25px 18px 12px;
+      }
+    }
+
+    &-label {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.21;
+      letter-spacing: .02em;
+      color: var(--second-accent-color);
+
+      @include tablet {
+        padding-left: 12px;
+        font-size: 16px;
+        line-height: 1.25;
+      }
+    }
+
+    &-input-icon {
+      appearance: none;
+
+      &::after {
+        content: '';
+        width: 20px;
+        height: 20px;
+        background-image: url(/src/images/arrow-down.svg);
+        background-position: 50% 50%;
+        position: absolute;
+        right: 16px;
+        z-index: 1;
+        margin-right: 4px;
+      }
+    }
+
+    &-user-wrap,
+    &-select-wrap {
+
+      @include tablet {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
+    }
+
+    &-submit {
+      width: 384px;
+      height: 64px;
+
+      @include tablet {
+        width: 592px;
+        font-size: 24px;
+      }
+
+      outline: transparent;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.20;
+      text-align: center;
+      color: var(--white-color);
+      background-color: var(--text-menu-color);
+      cursor: pointer;
+      margin: 0 auto;
+      display: block;
+      border: 1px solid var(--accent-color);
+      border-radius: 2px;
+      margin-top: 40px;
     }
   }
 
-  &__select {
-    height: 64px;
-    padding: 18px 25px 22px 12px;
+  .input {
 
-    @include tablet {
-      padding: 18px 25px 18px 12px;
+    &__option {
+      font-family: 'Times New Roman';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.15;
+      letter-spacing: .05em;
+      color: var(--placeholder-color);
     }
   }
 
-  &__label {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.21;
-    letter-spacing: .02em;
-    color: var(--second-accent-color);
+  .select {
 
-    @include tablet {
-      padding-left: 12px;
-      font-size: 16px;
-      line-height: 1.25;
+    &__wrap {
+      position: relative;
     }
-  }
 
-  &__input-icon {
-    appearance: none;
-
-    &::after {
+    &__wrap::after {
       content: '';
       width: 20px;
       height: 20px;
       background-image: url(/src/images/arrow-down.svg);
       background-position: 50% 50%;
       position: absolute;
-      right: 16px;
       z-index: 1;
-      margin-right: 4px;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      left: 92%;
     }
   }
 
-  &__user-wrap,
-  &__select-wrap {
-
-    @include tablet {
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-    }
+  input[type=date]::-webkit-calendar-picker-indicator {
+    height: 50px;
+    width: 0px;
+    padding-left: 100px;
+    z-index: 10;
   }
-
-  &__submit {
-    width: 384px;
-    height: 64px;
-
-    @include tablet {
-      width: 592px;
-      font-size: 24px;
-    }
-
-    outline: transparent;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.20;
-    text-align: center;
-    color: var(--white-color);
-    background-color: var(--text-menu-color);
-    cursor: pointer;
-    margin: 0 auto;
-    display: block;
-    border: 1px solid var(--accent-color);
-    border-radius: 2px;
-    margin-top: 40px;
-  }
-}
-
-.input {
-
-  &__text {
-    font-family: 'Times New Roman';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.15;
-    letter-spacing: .05em;
-    color: var(--placeholder-color);
-  }
-
-  &__icon {
-    position: absolute;
-    left: 347px;
-    top: 22.5px;
-    background-color: var(--first-color-fon);
-    fill: var(--accent-color);
-  }
-}
-
-.select {
-
-  &__wrap {
-    position: relative;
-  }
-
-  &__wrap::after {
-    content: '';
-    width: 20px;
-    height: 20px;
-    background-image: url(/src/images/arrow-down.svg);
-    background-position: 50% 50%;
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    left: 92%;
-  }
-}
-
-input[type=date]::-webkit-calendar-picker-indicator {
-  height: 50px;
-  width: 0px;
-  padding-left: 100px;
-  z-index: 10;
-}
