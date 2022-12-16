@@ -37,7 +37,6 @@
 
   @include tablet {
     margin-top: 142px;
-    // margin-bottom: 262px;
     gap: 48px;
   }
   @include desktop {
@@ -88,17 +87,16 @@
 .slider-about {
   margin-top: 32px;
   min-width: 0;
-  width: calc(100% - 54px);
+  width: 100%;
+  // width: calc(100% - 54px);
   height: 100%;
   position: relative;
   margin-left: auto;
   right: -15px;
-  background: #dadada;
-  // background: var(--first-color-fon);
+  background-color: var(--first-color-fon);
   box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
   @include tablet {
-    // position: relative;
     width: 428px;
     margin: 0;
     margin-right: 15px;
@@ -114,15 +112,25 @@
   }
   & .slick-arrow {
     position: absolute;
-    top: 279px;
+    // top: 279px;
     width: 30px;
     height: 16px;
     background-size: contain;
+
+    @media screen and (min-width: 320px) and (max-width: 413px) {
+      transform: translate(-150px, -130px);
+    }
   }
   // Arrow left
   & .slick-arrow.slick-prev {
-    left: 220px;
     background: url(../images/svg/arrow-left-about.svg) 0 0 / 100% no-repeat;
+    @media screen and (min-width: 320px) and (max-width: 413px) {
+      display: none;
+    }
+
+    @include mobile {
+      left: 220px;
+    }
     @include tablet {
       left: 334px;
       top: calc(194 + (96 / 2));
@@ -132,14 +140,18 @@
       left: calc(254 + 40 + 151);
       right: 103px;
     }
-    &:hover {
+    &:hover,
+    &:focus-within {
       background-image: url(../images/svg/arrow-left-about-gold.svg);
     }
   }
   // Arrow right
   & .slick-arrow.slick-next {
-    right: 18px;
     background: url(../images/svg/arrow-right-about.svg) 0 0 / 100% no-repeat;
+    right: 50px;
+    @include mobile {
+      right: 18px;
+    }
     @include tablet {
       right: 0;
       top: calc(194 + (96 / 2));
@@ -148,13 +160,17 @@
       top: calc(254 + (96 / 2));
       right: 9px;
     }
-    &:hover {
+    &:hover,
+    &:focus-within {
       background-image: url(../images/svg/arrow-right-about-gold.svg);
     }
   }
   .slider-about__item {
     text-align: center;
     margin-right: 24px;
+    background: #dadada;
+    box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
     @include tablet {
       margin-right: 40px;
     }

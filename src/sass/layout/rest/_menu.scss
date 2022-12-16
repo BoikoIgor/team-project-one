@@ -1,14 +1,18 @@
 .menu__section {
   width: 100%;
   background-color: var(--first-color-fon);
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-.menu__container {
-  max-width: 413px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   @include mobile {
-    width: 414px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  @include tablet {
+    padding-top: 58px;
+    padding-bottom: 40px;
+  }
+  @include desktop {
+    padding-bottom: 60px;
   }
 }
 
@@ -17,13 +21,57 @@
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
-  line-height: 37px;
+  line-height: 1.54;
 
   color: var(--main-title-color);
 
   padding-bottom: 32px;
+
+  text-transform: uppercase;
   @include mobile {
+    padding-bottom: 40px;
+
     font-size: 32px;
+    line-height: 1.16;
+  }
+  @include desktop {
+    padding-bottom: 40px;
+  }
+}
+
+.menu__dishes {
+  padding-bottom: 32px;
+  width: 100%;
+  @include mobile {
+    width: 384px;
+  }
+  @include tablet {
+    width: 930px;
+    display: flex;
+    gap: 88px;
+  }
+  @include desktop {
+    width: 1110px;
+    gap: 140px;
+    padding-bottom: 40px;
+  }
+}
+
+.menu__dishes--first-part {
+  @include tablet {
+    width: 411px;
+  }
+  @include desktop {
+    width: calc((100% - 140px) / 2);
+  }
+}
+
+.menu__dishes--second-part {
+  @include tablet {
+    width: 431px;
+  }
+  @include desktop {
+    width: calc((100% - 140px) / 2);
   }
 }
 
@@ -32,40 +80,79 @@
   font-family: 'Times New Roman', serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.15;
 
   color: var(--main-title-color);
 
   margin-bottom: 16px;
+  @include mobile {
+    font-size: 20px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+  @include tablet {
+    font-size: 24px;
+    line-height: 1.17;
+  }
 }
 
 .category__dish {
   display: block;
   width: 100%;
   padding-bottom: 16px;
-}
-.category__dish:not(:last-child) {
-  padding-bottom: 16px;
+  @include tablet {
+    padding-bottom: 0;
+  }
 }
 
-.dish__complex {
+.category__dish:not(:last-child) {
+  @include tablet {
+    padding-bottom: 20px;
+  }
+}
+
+.category__dish--no-padding {
+  padding-bottom: 0px;
+}
+
+.dish__complex,
+.dish__single {
   display: block;
 }
 
 .dish__complex:not(:last-child) {
   padding: 0 0 8px 0;
+  @include desktop {
+    padding-bottom: 12px;
+  }
+}
+
+.dish__single:not(:last-child) {
+  padding: 0 0 11px 0;
+  @include tablet {
+    padding-bottom: 8px;
+  }
+  @include desktop {
+    padding-bottom: 9px;
+  }
 }
 
 .dish__wrap {
   width: 221px;
+  @include tablet {
+    width: 226px;
+  }
+  @include desktop {
+    width: 291px;
+  }
 }
 
 .dish__name {
   width: 100%;
   font-family: 'Montserrat-500', sans-serif;
   font-style: normal;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.21;
   letter-spacing: 0.02em;
 
@@ -73,30 +160,50 @@
 
   margin-bottom: 4px;
   padding: 0;
+  @include mobile {
+    font-size: 14px;
+    line-height: 1.21;
+  }
+  @include desktop {
+    font-size: 16px;
+    line-height: 1.25;
+  }
 }
 
-.dish__single {
-  display: block;
-}
-
-.dish__single:not(:last-child) {
-  padding: 0 0 11px 0;
+.dish__name--single {
+  width: 185px;
 }
 
 .dish__name--single:not(:last-child) {
-  height: 17px;
-  width: 162px;
   margin-bottom: 0;
 }
 
 .dish__ingredients {
   font-family: 'Montserrat-400', sans-serif;
   font-style: normal;
-  font-size: 10px;
+  font-size: 8px;
   line-height: 1.2;
   letter-spacing: 0.02em;
 
   color: var(--main-title-color);
+  @include mobile {
+    font-size: 10px;
+  }
+  @include tablet {
+    width: 211px;
+  }
+  @include desktop {
+    width: 262px;
+  }
+}
+
+.dish__ingredients--bigger-width {
+  @include tablet {
+    width: 225px;
+  }
+  @include desktop {
+    width: 257px;
+  }
 }
 
 .dish__weight {
@@ -115,14 +222,41 @@
   @include mobile {
     font-size: 14px;
   }
+  @include tablet {
+    padding: 0 0 0 46px;
+  }
+  @include desktop {
+    padding: 0 0 0 26px;
+  }
+}
+
+.dish__weight--salad {
+  @include tablet {
+    padding: 0 0 0 46px;
+  }
+  @include desktop {
+    padding: 0 0 0 28px;
+  }
 }
 
 .dish__weight--desert {
-  padding-left: 90px;
+  padding-left: 62px;
+  @include tablet {
+    padding: 0 0 0 82px;
+  }
+  @include desktop {
+    padding: 0 0 0 132px;
+  }
 }
 
 .dish__weight--drinks {
-  padding-left: 75px;
+  padding-left: 53px;
+  @include tablet {
+    padding: 0 0 0 85px;
+  }
+  @include desktop {
+    padding: 0 0 0 132px;
+  }
 }
 
 .dish__price {
@@ -137,22 +271,80 @@
   padding: 0 0 0 32px;
   min-width: 94px;
   vertical-align: middle;
-  text-align: end;
+  // text-align: end;
   @include mobile {
     font-size: 14px;
+  }
+  @include tablet {
+    padding: 0 0 0 38px;
+  }
+  @include desktop {
+    padding: 0 0 0 67px;
+  }
+}
+
+.dish__price--potato {
+  @include tablet {
+    padding: 0 0 0 40px;
+  }
+  @include desktop {
+    padding: 0 0 0 70px;
+  }
+}
+
+.dish__price--salad {
+  @include tablet {
+    padding: 0 0 0 61px;
+  }
+  @include desktop {
+    padding: 0 0 0 69px;
+  }
+}
+
+.dish__price--desert {
+  @include tablet {
+    padding: 0 0 0 67px;
+  }
+  @include desktop {
+    padding: 0 0 0 71px;
+  }
+}
+
+.dish__price--drinks {
+  @include tablet {
+    padding: 0 0 0 51px;
+  }
+  @include desktop {
+    padding: 0 0 0 59px;
   }
 }
 
 .dish__price--bigger-padding {
   padding: 0 0 0 45px;
+  @include tablet {
+    padding: 0 0 0 62px;
+  }
+  @include desktop {
+    padding: 0 0 0 69px;
+  }
 }
 
 .dish__price--big-padding {
-  padding: 0 0 0 40px;
+  padding: 0 0 0 38px;
+  @include tablet {
+    padding: 0 0 0 55px;
+  }
+  @include desktop {
+    padding: 0 0 0 64px;
+  }
 }
 
 .menu__button {
   display: block;
-  margin: 0 auto;
-  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  @include tablet {
+    margin-left: auto;
+    margin-right: 0;
+  }
 }

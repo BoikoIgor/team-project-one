@@ -1,4 +1,7 @@
 .hero-room {
+  background-color: var(--first-color-fon);
+}
+.fade {
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
@@ -30,21 +33,23 @@
       ),
       url(././../images/hotel/bg/hotel-bg-2x-min.jpg);
   }
-  background-image: linear-gradient(
-      180deg,
-      #000000 0%,
-      rgba(0, 0, 0, 0.55) 9.17%,
-      rgba(0, 0, 0, 0) 50%
-    ),
-    url(././../images/hotel/bg/hotel-bg-tab-min.jpg);
-  @include retina {
+  @include tablet {
     background-image: linear-gradient(
         180deg,
         #000000 0%,
         rgba(0, 0, 0, 0.55) 9.17%,
         rgba(0, 0, 0, 0) 50%
       ),
-      url(././../images/hotel/bg/hotel-bg-tab-2x-min.jpg);
+      url(././../images/hotel/bg/hotel-bg-tab-min.jpg);
+    @include retina {
+      background-image: linear-gradient(
+          180deg,
+          #000000 0%,
+          rgba(0, 0, 0, 0.55) 9.17%,
+          rgba(0, 0, 0, 0) 50%
+        ),
+        url(././../images/hotel/bg/hotel-bg-tab-2x-min.jpg);
+    }
   }
   @include desktop {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -66,6 +71,222 @@
     }
   }
 }
+.background-image--double-lux1 {
+  background-image: linear-gradient(
+      180deg,
+      #000000 0%,
+      rgba(0, 0, 0, 0.55) 9.17%,
+      rgba(0, 0, 0, 0) 50%
+    ),
+    url(../images/rooms/room-mob-1-min.jpg);
+  @include retina {
+    background-image: linear-gradient(
+        180deg,
+        #000000 0%,
+        rgba(0, 0, 0, 0.55) 9.17%,
+        rgba(0, 0, 0, 0) 50%
+      ),
+      url(../images/rooms/room-mob-1-2x-min.jpg);
+  }
+  @include tablet {
+    background-image: linear-gradient(
+        180deg,
+        #000000 0%,
+        rgba(0, 0, 0, 0.55) 9.17%,
+        rgba(0, 0, 0, 0) 50%
+      ),
+      url(../images/rooms/empty-tablet-interrior-elements-decoration.jpg);
+    @include retina {
+      background-image: linear-gradient(
+          180deg,
+          #000000 0%,
+          rgba(0, 0, 0, 0.55) 9.17%,
+          rgba(0, 0, 0, 0) 50%
+        ),
+        url(../images/rooms/empty-tablet-interrior-elements-decoration-@2x.jpg);
+    }
+  }
+  @include desktop {
+    background-image: linear-gradient(
+        180deg,
+        #000000 0%,
+        rgba(0, 0, 0, 0.55) 9.17%,
+        rgba(0, 0, 0, 0) 50%
+      ),
+      url(../images/rooms/room-desktop-1-min.jpg);
+    @include retina {
+      background-image: linear-gradient(
+          180deg,
+          #000000 0%,
+          rgba(0, 0, 0, 0.55) 9.17%,
+          rgba(0, 0, 0, 0) 50%
+        ),
+        url(../images/rooms/room-desktop-1-2x-min.jpg);
+    }
+  }
+}
+.background-image--double-lux2 {
+  background-image: linear-gradient(
+      180deg,
+      #000000 0%,
+      rgba(0, 0, 0, 0.55) 9.17%,
+      rgba(0, 0, 0, 0) 50%
+    ),
+    url(../images/rooms/room-mob-2-min.jpg);
+  @include retina {
+    background-image: linear-gradient(
+        180deg,
+        #000000 0%,
+        rgba(0, 0, 0, 0.55) 9.17%,
+        rgba(0, 0, 0, 0) 50%
+      ),
+      url(../images/rooms/room-mob-2-2x-min.jpg);
+  }
+  @include tablet {
+    background-image: linear-gradient(
+        180deg,
+        #000000 0%,
+        rgba(0, 0, 0, 0.55) 9.17%,
+        rgba(0, 0, 0, 0) 50%
+      ),
+      url(../images/rooms/empty-tablet-interrior-with-elements-decoration.jpg);
+    @include retina {
+      background-image: linear-gradient(
+          180deg,
+          #000000 0%,
+          rgba(0, 0, 0, 0.55) 9.17%,
+          rgba(0, 0, 0, 0) 50%
+        ),
+        url(../images/rooms/empty-tablet-interrior-with-elements-decoration-2@2x.jpg);
+    }
+  }
+  @include desktop {
+    background-image: linear-gradient(
+        180deg,
+        #000000 0%,
+        rgba(0, 0, 0, 0.55) 9.17%,
+        rgba(0, 0, 0, 0) 50%
+      ),
+      url(../images/rooms/room-desktop-4-min.jpg);
+    @include retina {
+      background-image: linear-gradient(
+          180deg,
+          #000000 0%,
+          rgba(0, 0, 0, 0.55) 9.17%,
+          rgba(0, 0, 0, 0) 50%
+        ),
+        url(../images/rooms/room-desktop-4-2x-min.jpg);
+    }
+  }
+}
+.background-image--double-lux3 {
+  background-image: linear-gradient(
+      180deg,
+      #000000 0%,
+      rgba(0, 0, 0, 0.55) 9.17%,
+      rgba(0, 0, 0, 0) 50%
+    ),
+    url(../images/rooms/decor-mobile-3-min.jpg);
+  @include retina {
+    background-image: linear-gradient(
+        180deg,
+        #000000 0%,
+        rgba(0, 0, 0, 0.55) 9.17%,
+        rgba(0, 0, 0, 0) 50%
+      ),
+      url(../images/rooms/decor-mobile-3@2x.jpg);
+  }
+  @include tablet {
+    background-image: linear-gradient(
+        180deg,
+        #000000 0%,
+        rgba(0, 0, 0, 0.55) 9.17%,
+        rgba(0, 0, 0, 0) 50%
+      ),
+      url(././../images/hotel/bg/hotel-bg-tab-min.jpg);
+    @include retina {
+      background-image: linear-gradient(
+          180deg,
+          #000000 0%,
+          rgba(0, 0, 0, 0.55) 9.17%,
+          rgba(0, 0, 0, 0) 50%
+        ),
+        url(././../images/hotel/bg/hotel-bg-tab-2x-min.jpg);
+    }
+  }
+  @include desktop {
+    background-image: linear-gradient(
+        180deg,
+        #000000 0%,
+        rgba(0, 0, 0, 0.55) 9.17%,
+        rgba(0, 0, 0, 0) 50%
+      ),
+      url(../images/rooms/room-desktop-5-min.jpg);
+    @include retina {
+      background-image: linear-gradient(
+          180deg,
+          #000000 0%,
+          rgba(0, 0, 0, 0.55) 9.17%,
+          rgba(0, 0, 0, 0) 50%
+        ),
+        url(../images/rooms/room-desktop-5-2x-min.jpg);
+    }
+  }
+}
+.background-image--double-lux4 {
+  background-image: linear-gradient(
+      180deg,
+      #000000 0%,
+      rgba(0, 0, 0, 0.55) 9.17%,
+      rgba(0, 0, 0, 0) 50%
+    ),
+    url(../images/rooms/room-mob-2-min.jpg);
+  @include retina {
+    background-image: linear-gradient(
+        180deg,
+        #000000 0%,
+        rgba(0, 0, 0, 0.55) 9.17%,
+        rgba(0, 0, 0, 0) 50%
+      ),
+      url(../images/rooms/room-mob-2-2x-min.jpg);
+  }
+  @include tablet {
+    background-image: linear-gradient(
+        180deg,
+        #000000 0%,
+        rgba(0, 0, 0, 0.55) 9.17%,
+        rgba(0, 0, 0, 0) 50%
+      ),
+      url(../images/rooms/empty-tablet-interrior-with-elements-decoration.jpg);
+    @include retina {
+      background-image: linear-gradient(
+          180deg,
+          #000000 0%,
+          rgba(0, 0, 0, 0.55) 9.17%,
+          rgba(0, 0, 0, 0) 50%
+        ),
+        url(../images/rooms/empty-tablet-interrior-with-elements-decoration-2@2x.jpg);
+    }
+  }
+  @include desktop {
+    background-image: linear-gradient(
+        180deg,
+        #000000 0%,
+        rgba(0, 0, 0, 0.55) 9.17%,
+        rgba(0, 0, 0, 0) 50%
+      ),
+      url(../images/rooms/room-desktop-3-min.jpg);
+    @include retina {
+      background-image: linear-gradient(
+          180deg,
+          #000000 0%,
+          rgba(0, 0, 0, 0.55) 9.17%,
+          rgba(0, 0, 0, 0) 50%
+        ),
+        url(../images/rooms/room-desktop-3-2x-min.jpg);
+    }
+  }
+}
 .slick-dotted.slick-slider {
   margin-bottom: 93px;
 }
@@ -76,6 +297,10 @@
   height: 40px;
 }
 .slick-prev.slick-arrow {
+  &:hover,
+  &:focus-within {
+    background-image: url(../images/arrow-left-dark.svg);
+  }
   background-image: url(../images/arrow-left.svg);
   left: 15px;
   z-index: 9;
@@ -87,8 +312,13 @@
   }
 }
 .slick-next.slick-arrow {
+  &:hover,
+  &:focus-within {
+    background-image: url(../images/arrow-right-dark.svg);
+  }
   background-image: url(../images/arrow-right.svg);
   right: 15px;
+
   @include tablet {
     right: 47px;
   }
@@ -102,11 +332,13 @@
 }
 
 .container--hroom {
+  padding-bottom: 14px;
   padding-top: 483px;
   position: relative;
+
   @include tablet {
-    padding-bottom: 20px;
     padding-top: 468px;
+    padding-bottom: 20px;
   }
   @include desktop {
     padding-bottom: 48px;
@@ -130,6 +362,7 @@
   line-height: 1.14;
   letter-spacing: 0.05em;
   color: var(--white-color);
+  text-shadow: 1px 1px 2px #a17f7f, 0 0 1em #3e3e83, 0 0 0.2em #0606b7;
   @media screen and (max-width: 1023px) {
     max-width: 325px;
   }
@@ -138,6 +371,9 @@
 
     font-size: 36px;
     line-height: 1.13;
+  }
+  &--uppercase {
+    text-transform: uppercase;
   }
 }
 .hero-room__upercase {
@@ -150,11 +386,14 @@
   letter-spacing: 0.02em;
   color: var(--white-color);
   max-width: 325px;
+  text-shadow: 1px 1px 2px #a17f7f, 0 0 1em #3e3e83, 0 0 0.2em #0606b7;
+
   @include tablet {
     font-size: 16px;
     max-width: 400px;
   }
 }
+
 .address--room {
   @include tablet {
     margin-right: 41px;
@@ -163,6 +402,7 @@
     display: none;
   }
 }
+
 .list-social--room {
   @media screen and (max-width: 1023px) {
     flex-direction: column;

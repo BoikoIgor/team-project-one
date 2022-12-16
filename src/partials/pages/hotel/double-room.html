@@ -1,3 +1,62 @@
-<section>
-  <h2>Double room</h2>
+<section class="room-double">
+  <div class="container room-double__container">
+    <p class="room-double__content">Amet minim mollit non</p>
+    <p class="room-double__logo">MIMIHO</p>
+    <h2 class="room-double__title">ДВОМІСНИЙ НОМЕР</h2>
+    <div class="room-double__description-wrap">
+      <p class="room-double__description">
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+        sint. Velit officia consequat duis enim velit mollit. Exercitation
+        veniam consequat sunt nostrud amet.
+      </p>
+    </div>
+
+    <div class="room-double__photo">
+      <picture>
+        <source
+          srcset="
+            /src/images/hotel/double-room/double-room-desktop-min.jpg    1x,
+            /src/images/hotel/double-room/double-room-desktop-2x-min.jpg 2x
+          "
+          media="(min-width: 1280px)"
+          width="460"
+        />
+        <source
+          srcset="
+            /src/images/hotel/double-room/double-room-tab-min.jpg    1x,
+            /src/images/hotel/double-room/double-room-tab-2x-min.jpg 2x
+          "
+          media="(min-width: 1024px)"
+          width="400"
+        />
+        <source
+          srcset="
+            /src/images/hotel/double-room/double-room-min.jpg    1x,
+            /src/images/hotel/double-room/double-room-2x-min.jpg 2x
+          "
+          media="(min-width: 414px)"
+          width="244"
+        />
+        <img
+          src="/src/images/hotel/double-room/double-room-min.jpg"
+          alt="двомісний номер"
+          width="244"
+          height="322"
+        />
+      </picture>
+    </div>
+
+    <div class="room-double__button-wrap">
+      <button class="button button__dark room-double__button" type="button">
+        <a class="link" href="/src/room-double.html">Детальніше</a>
+      </button>
+      <button
+        class="button button__dark room-double__button-prices"
+        type="button"
+        href="/src/partials/pages/rooms/amenities.html"
+      >
+        Переглянути ціни
+      </button>
+    </div>
+  </div>
 </section>
