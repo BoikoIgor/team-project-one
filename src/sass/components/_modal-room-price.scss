@@ -1,0 +1,205 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 20;
+
+  &.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+  
+      & .modal {
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+      }
+    }
+}
+
+.modal {
+  background-color: var(--first-color-fon);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  z-index: 20;
+
+  @include tablet {
+    max-width: 712px;
+  }
+
+  &__close {
+    background-color: transparent;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    fill: var(--main-title-color);
+    border: 0;
+    
+    &:hover,
+    &:focus {
+      fill: var(--accent-color);
+    }
+  }
+
+  &__room-title {
+    font-family: 'Times New Roman';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: var(--text-menu-color);
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__room-form{
+    margin: 60px 15px;
+
+    @include tablet {
+      margin: 60px;
+    }
+  }
+
+  &__room-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.class {
+
+  &__field {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 8px;
+  }
+
+  &__select {
+    width: 384px;
+    height: 54px;
+    border: 1px solid var(--second-accent-color);
+    font-family: 'Times New Roman';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: .05em;
+    color: var(--placeholder-color);
+    padding: 17px 25px 17px 12px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    appearance: none;
+
+    @include tablet {
+      width: 288px;
+      height: 64px;
+      font-size: 24px;
+      line-height: 1.16;
+    }
+  }
+
+  &__label {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.21;
+    letter-spacing: .02em;
+    color: var(--second-accent-color);
+    padding-left: 12px;
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 1.25;
+    }
+  }
+
+}
+.modal__room-submit {
+  width: 384px;
+  height: 64px;
+
+  @include tablet {
+    width: 592px;
+    font-size: 24px;
+  }
+
+  outline: transparent;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.20;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white-color);
+  background-color: var(--text-menu-color);
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+  border: 1px solid var(--accent-color);
+  border-radius: 2px;
+  margin-top: 40px;
+}
+
+.category {
+  width: 194px;
+  height: 28px;
+  border-color: transparent;
+  background-color: transparent;
+  font-family: 'Times New Roman';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: .05em;
+  color: var(--placeholder-color);
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  appearance: none;
+  outline: none;
+
+  @include tablet {
+    /* width: 288px;
+    height: 64px; */
+    font-size: 24px;
+    line-height: 1.16;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 28px;
+  }
+}
+
+.total__wrap {
+
+  @include tablet {
+    display: flex;
+    gap: 16px;
+  }
+}
+
+.class {
+  padding-left: 0px;
+}

@@ -90,7 +90,7 @@
   align-items: flex-start;
 }
 // Slider-about styles
-.slider-about {
+.slider-about-kitchen {
   margin-top: 32px;
   min-width: 0;
   width: calc(100% - 54px);
@@ -112,8 +112,8 @@
   }
   @include desktop {
     position: absolute;
-    width: 548px;
-    height: 254px;
+    width: 530px;
+    height: 245px;
     top: 794px;
     right: 0;
   }
@@ -134,7 +134,7 @@
     }
     @include desktop {
       top: calc(254 + (96 / 2));
-      left: calc(254 + 40 + 151);
+      left: 435px;
       right: 103px;
     }
     &:hover,
@@ -164,6 +164,10 @@
     margin-right: 24px;
     @include tablet {
       margin-right: 40px;
+    }
+    &picture {
+      width: auto;
+      height: auto;
     }
   }
 }
