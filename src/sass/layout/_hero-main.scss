@@ -200,9 +200,14 @@
   }
 }
 .list-social__icon {
+  transition: var(--animation-link);
   display: block;
   fill: rgba(243, 198, 83, 0.7);
   transition: fill var(--animation-link);
+  .list-social__link:hover &,
+  .list-social__link:focus-within & {
+    fill: var(--accent-color);
+  }
 }
 .list-social__icon--loc {
   position: absolute;
