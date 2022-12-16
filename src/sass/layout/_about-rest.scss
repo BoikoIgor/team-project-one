@@ -87,8 +87,8 @@
 .slider-about {
   margin-top: 32px;
   min-width: 0;
-  width: 100%;
-  // width: calc(100% - 54px);
+  // width: 100%;
+  width: calc(100% - 54px);
   height: 100%;
   position: relative;
   margin-left: auto;
@@ -112,25 +112,25 @@
   }
   & .slick-arrow {
     position: absolute;
-    // top: 279px;
+    top: 279px;
     width: 30px;
     height: 16px;
     background-size: contain;
 
-    @media screen and (min-width: 320px) and (max-width: 413px) {
-      transform: translate(-150px, -130px);
-    }
+    // @media screen and (min-width: 320px) and (max-width: 413px) {
+    //   transform: translate(-150px, -130px);
+    // }
   }
   // Arrow left
   & .slick-arrow.slick-prev {
     background: url(../images/svg/arrow-left-about.svg) 0 0 / 100% no-repeat;
-    @media screen and (min-width: 320px) and (max-width: 413px) {
-      display: none;
-    }
-
-    @include mobile {
-      left: 220px;
-    }
+    left: 220px;
+    // @media screen and (min-width: 320px) and (max-width: 413px) {
+    //   display: none;
+    // }
+    // @include mobile {
+    //   left: 220px;
+    // }
     @include tablet {
       left: 334px;
       top: calc(194 + (96 / 2));
@@ -148,10 +148,11 @@
   // Arrow right
   & .slick-arrow.slick-next {
     background: url(../images/svg/arrow-right-about.svg) 0 0 / 100% no-repeat;
-    right: 50px;
-    @include mobile {
-      right: 18px;
-    }
+    // right: 50px;
+    right: 18px;
+    // @include mobile {
+    //   right: 18px;
+    // }
     @include tablet {
       right: 0;
       top: calc(194 + (96 / 2));

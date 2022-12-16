@@ -343,9 +343,468 @@ table {
   }
 }
 
-.overlay {
+.backdrop__room {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  z-index: 10;
+  background-color: var(--overlay);
+}
+.backdrop__room.is-hidden {
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
+}
+.backdrop__room.is-hidden .modal__room {
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.modal__room {
+  background-color: var(--first-color-fon);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* bottom: 50%; */
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 1024px) {
+  .modal__room {
+    max-width: 712px;
+  }
+}
+.modal__room-close {
+  background-color: transparent;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  fill: var(--main-title-color);
+  border: 0;
+}
+.modal__room-close:hover, .modal__room-close:focus {
+  fill: var(--accent-color);
+}
+.modal__room-title {
+  font-family: "Times New Roman";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+  color: var(--text-menu-color);
+  text-align: center;
+  margin-top: 60px;
+  text-transform: uppercase;
+}
+.modal__room-form {
+  margin: 40px 15px;
+  display: flex;
+  flex-direction: column;
+}
+.modal__room-form:not(:last-child) {
+  gap: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .modal__room-form {
+    margin: 36px 60px 60px 60px;
+  }
+}
+.modal__room-user-wrap, .modal__room-times-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .modal__room-user-wrap, .modal__room-times-wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+.modal__room-field {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 8px;
+}
+.modal__room-input, .modal__room-select {
+  width: 384px;
+  height: 54px;
+  border: 1px solid var(--second-accent-color);
+  font-family: "Times New Roman";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.05em;
+  color: var(--placeholder-color);
+  padding: 17px 25px 17px 12px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  appearance: none;
+}
+@media screen and (min-width: 1024px) {
+  .modal__room-input, .modal__room-select {
+    width: 288px;
+    height: 64px;
+    font-size: 24px;
+    line-height: 1.16;
+  }
+}
+.modal__room-select-wrap {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .modal__room-select-wrap {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+.modal__room-select {
+  height: 64px;
+  padding: 18px 25px 22px 12px;
+}
+@media screen and (min-width: 1024px) {
+  .modal__room-select {
+    padding: 18px 25px 18px 12px;
+  }
+}
+.modal__room-label {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.02em;
+  color: var(--second-accent-color);
+}
+@media screen and (min-width: 1024px) {
+  .modal__room-label {
+    padding-left: 12px;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+.modal__room-input-icon {
+  appearance: none;
+}
+.modal__room-input-icon::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url(/src/images/arrow-down.svg);
+  background-position: 50% 50%;
+  position: absolute;
+  right: 16px;
+  z-index: 1;
+  right: 10%;
+}
+@media screen and (min-width: 1024px) {
+  .modal__room-user-wrap, .modal__room-times-wrap {
+    display: flex;
+    gap: 16px;
+  }
+}
+.modal__room-submit {
+  width: 384px;
+  height: 64px;
+  outline: transparent;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--white-color);
+  background-color: var(--text-menu-color);
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+  border: 1px solid var(--accent-color);
+  border-radius: 2px;
+  margin-top: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .modal__room-submit {
+    width: 592px;
+    font-size: 24px;
+  }
+}
+
+.input__room-text {
+  font-family: "Times New Roman";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.05em;
+  color: var(--placeholder-color);
+}
+.input__icon {
+  position: absolute;
+  left: 347px;
+  top: 22.5px;
+  background-color: var(--first-color-fon);
+  fill: var(--accent-color);
+}
+
+.select__wrap {
+  position: relative;
+}
+.select__wrap::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url(/src/images/arrow-down.svg);
+  background-position: 50% 50%;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  right: 5%;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  height: 50px;
+  width: 0px;
+  padding-left: 100px;
+  z-index: 10;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  z-index: 10;
+  background-color: var(--overlay);
+}
+.overlay.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.overlay.is-hidden .modal__table {
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.modal__table {
+  background-color: var(--first-color-fon);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* bottom: 50%; */
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 1024px) {
+  .modal__table {
+    max-width: 712px;
+  }
+}
+.modal__table-close {
+  background-color: transparent;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  fill: var(--main-title-color);
+  border: 0;
+}
+.modal__table-close:hover, .modal__table-close:focus {
+  fill: var(--accent-color);
+}
+.modal__table-title {
+  font-family: "Times New Roman";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.05em;
+  color: var(--text-menu-color);
+  text-align: center;
+  margin-top: 60px;
+  text-transform: uppercase;
+}
+.modal__table-form {
+  margin: 40px 15px 60px 15px;
+}
+@media screen and (min-width: 1024px) {
+  .modal__table-form {
+    margin: 36px 60px 60px 60px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .modal__table-form-wrap {
+    display: flex;
+    gap: 16px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .modal__table-user-wrap, .modal__table-select-wrap {
+    display: flex;
+    gap: 16px;
+  }
+}
+.modal__table-field {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 8px;
+}
+.modal__table-field:not(:last-child) {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 1024px) {
+  .modal__table-field:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+.modal__table-input, .modal__table-select {
+  width: 384px;
+  height: 54px;
+  border: 1px solid var(--second-accent-color);
+  font-family: "Times New Roman";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.05em;
+  color: var(--placeholder-color);
+  padding: 17px 24px 17px 12px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  appearance: none;
+}
+@media screen and (min-width: 1024px) {
+  .modal__table-input, .modal__table-select {
+    width: 288px;
+    height: 64px;
+    font-size: 24px;
+    line-height: 1.16;
+  }
+}
+.modal__table-select {
+  height: 54px;
+}
+@media screen and (min-width: 1024px) {
+  .modal__table-select {
+    height: 64px;
+    padding: 18px 25px 18px 12px;
+  }
+}
+.modal__table-label {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.21;
+  letter-spacing: 0.02em;
+  color: var(--second-accent-color);
+}
+@media screen and (min-width: 1024px) {
+  .modal__table-label {
+    padding-left: 12px;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+.modal__table-input-icon {
+  appearance: none;
+}
+.modal__table-input-icon::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url(/src/images/arrow-down.svg);
+  background-position: 50% 50%;
+  position: absolute;
+  right: 16px;
+  z-index: 1;
+  margin-right: 4px;
+}
+@media screen and (min-width: 1024px) {
+  .modal__table-user-wrap, .modal__table-select-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+}
+.modal__table-submit {
+  width: 384px;
+  height: 64px;
+  outline: transparent;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--white-color);
+  background-color: var(--text-menu-color);
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+  border: 1px solid var(--accent-color);
+  border-radius: 2px;
+  margin-top: 40px;
+}
+@media screen and (min-width: 1024px) {
+  .modal__table-submit {
+    width: 592px;
+    font-size: 24px;
+  }
+}
+
+.input__option {
+  font-family: "Times New Roman";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.05em;
+  color: var(--placeholder-color);
+}
+
+.select__wrap {
+  position: relative;
+}
+.select__wrap::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url(/src/images/arrow-down.svg);
+  background-position: 50% 50%;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 92%;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  height: 50px;
+  width: 0px;
+  padding-left: 100px;
+  z-index: 10;
+}
+
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -353,6 +812,15 @@ table {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 20;
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
 }
 
 .modal {
@@ -365,8 +833,6 @@ table {
   transform: translate(-50%, -50%);
   padding: 10px;
   z-index: 20;
-  opacity: 0;
-  visibility: hidden;
 }
 @media screen and (min-width: 1024px) {
   .modal {
@@ -534,246 +1000,6 @@ table {
   padding-left: 0px;
 }
 
-.modal.is-show,
-.overlay.is-show {
-  display: block;
-}
-
-/* .modal.active,
-.overlay.active {
-  opacity: 1;
-  visibility: visible;
-} */
-.backdrop {
-  height: 100%;
-  width: 100%;
-  top: 0;
-  position: fixed;
-  z-index: 10;
-  background-color: var(--overlay);
-}
-.backdrop.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-}
-
-.modal {
-  background-color: var(--first-color-fon);
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 2px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  /* bottom: 50%; */
-  transform: translate(-50%, -50%);
-}
-@media screen and (min-width: 1024px) {
-  .modal {
-    max-width: 712px;
-  }
-}
-.modal__close {
-  background-color: transparent;
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  fill: var(--main-title-color);
-  border: 0;
-}
-.modal__close:hover, .modal__close:focus {
-  fill: var(--accent-color);
-}
-.modal__title {
-  font-family: "Times New Roman";
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.16;
-  letter-spacing: 0.05em;
-  color: var(--text-menu-color);
-  text-align: center;
-  margin-top: 60px;
-}
-.modal__form {
-  margin: 40px 15px 60px 15px;
-}
-@media screen and (min-width: 1024px) {
-  .modal__form {
-    margin: 36px 60px 60px 60px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .modal__form-wrap {
-    display: flex;
-    gap: 16px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .modal__user-wrap, .modal__times-wrap {
-    display: flex;
-    gap: 16px;
-  }
-}
-.modal__field {
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 8px;
-}
-.modal__field:not(:last-child) {
-  margin-bottom: 20px;
-}
-@media screen and (min-width: 1024px) {
-  .modal__field:not(:last-child) {
-    margin-bottom: 0;
-  }
-}
-.modal__input, .modal__select {
-  width: 384px;
-  height: 54px;
-  border: 1px solid var(--second-accent-color);
-  font-family: "Times New Roman";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  letter-spacing: 0.05em;
-  color: var(--placeholder-color);
-  padding: 17px 24px 17px 12px;
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  cursor: pointer;
-  position: relative;
-  appearance: none;
-}
-@media screen and (min-width: 1024px) {
-  .modal__input, .modal__select {
-    width: 288px;
-    height: 64px;
-    font-size: 24px;
-    line-height: 1.16;
-  }
-}
-.modal__select {
-  height: 64px;
-  padding: 18px 25px 22px 12px;
-}
-@media screen and (min-width: 1024px) {
-  .modal__select {
-    padding: 18px 25px 18px 12px;
-  }
-}
-.modal__label {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.21;
-  letter-spacing: 0.02em;
-  color: var(--second-accent-color);
-}
-@media screen and (min-width: 1024px) {
-  .modal__label {
-    padding-left: 12px;
-    font-size: 16px;
-    line-height: 1.25;
-  }
-}
-.modal__input-icon {
-  appearance: none;
-}
-.modal__input-icon::after {
-  content: "";
-  width: 20px;
-  height: 20px;
-  background-image: url(/src/images/arrow-down.svg);
-  background-position: 50% 50%;
-  position: absolute;
-  right: 16px;
-  z-index: 1;
-  margin-right: 4px;
-}
-@media screen and (min-width: 1024px) {
-  .modal__user-wrap, .modal__select-wrap {
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-  }
-}
-.modal__submit {
-  width: 384px;
-  height: 64px;
-  outline: transparent;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  text-align: center;
-  color: var(--white-color);
-  background-color: var(--text-menu-color);
-  cursor: pointer;
-  margin: 0 auto;
-  display: block;
-  border: 1px solid var(--accent-color);
-  border-radius: 2px;
-  margin-top: 40px;
-}
-@media screen and (min-width: 1024px) {
-  .modal__submit {
-    width: 592px;
-    font-size: 24px;
-  }
-}
-
-.input__text {
-  font-family: "Times New Roman";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  letter-spacing: 0.05em;
-  color: var(--placeholder-color);
-}
-.input__icon {
-  position: absolute;
-  left: 347px;
-  top: 22.5px;
-  background-color: var(--first-color-fon);
-  fill: var(--accent-color);
-}
-
-.select__wrap {
-  position: relative;
-}
-.select__wrap::after {
-  content: "";
-  width: 20px;
-  height: 20px;
-  background-image: url(/src/images/arrow-down.svg);
-  background-position: 50% 50%;
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  left: 92%;
-}
-
-input[type=date]::-webkit-calendar-picker-indicator {
-  height: 50px;
-  width: 0px;
-  padding-left: 100px;
-  z-index: 10;
-}
-
 .header {
   position: relative;
 }
@@ -787,12 +1013,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
   z-index: 9;
 }
 
-.menu {
+.header__menu {
   display: flex;
   align-items: center;
 }
 @media screen and (max-width: 413px) {
-  .menu {
+  .header__menu {
     width: 100%;
   }
 }
@@ -879,6 +1105,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
     margin-right: 32px;
   }
 }
+.menu__link:hover, .menu__link:focus {
+  color: var(--second-accent-color);
+  transition: color var(--animation-link);
+}
 
 .menu__item {
   display: flex;
@@ -936,6 +1166,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
   letter-spacing: 0.02em;
   color: var(--white-color);
 }
+.menu__tel:hover, .menu__tel:focus {
+  color: var(--second-accent-color);
+  transition: color var(--animation-link);
+}
 
 @media screen and (max-width: 1023px) {
   .menu__tel-tel {
@@ -949,6 +1183,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .menu__tel-icon {
   fill: var(--accent-color);
+  transition: fill var(--animation-link);
+}
+.menu__tel:hover .menu__tel-icon, .menu__tel:focus .menu__tel-icon {
+  fill: var(--second-accent-color);
 }
 @media screen and (min-width: 1024px) {
   .menu__tel-icon {
@@ -970,6 +1208,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .header__social {
     display: none;
   }
+}
+
+.header__social-icon {
+  fill: var(--accent-color);
+  transition: fill var(--animation-link);
+}
+.header__social-link:hover .header__social-icon, .header__social-link:focus .header__social-icon {
+  fill: var(--second-accent-color);
 }
 
 .section-hero {
@@ -1183,9 +1429,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .list-social__icon {
+  transition: var(--animation-link);
   display: block;
   fill: rgba(243, 198, 83, 0.7);
   transition: fill var(--animation-link);
+}
+.list-social__link:hover .list-social__icon, .list-social__link:focus-within .list-social__icon {
+  fill: var(--accent-color);
 }
 
 .list-social__icon--loc {
@@ -1309,7 +1559,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .slider-about {
   margin-top: 32px;
   min-width: 0;
-  width: 100%;
+  width: calc(100% - 54px);
   height: 100%;
   position: relative;
   margin-left: auto;
@@ -1338,27 +1588,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 .slider-about .slick-arrow {
   position: absolute;
+  top: 279px;
   width: 30px;
   height: 16px;
   background-size: contain;
 }
-@media screen and (min-width: 320px) and (max-width: 413px) {
-  .slider-about .slick-arrow {
-    transform: translate(-150px, -130px);
-  }
-}
 .slider-about .slick-arrow.slick-prev {
   background: url(../images/svg/arrow-left-about.svg) 0 0/100% no-repeat;
-}
-@media screen and (min-width: 320px) and (max-width: 413px) {
-  .slider-about .slick-arrow.slick-prev {
-    display: none;
-  }
-}
-@media screen and (min-width: 414px) {
-  .slider-about .slick-arrow.slick-prev {
-    left: 220px;
-  }
+  left: 220px;
 }
 @media screen and (min-width: 1024px) {
   .slider-about .slick-arrow.slick-prev {
@@ -1378,12 +1615,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 .slider-about .slick-arrow.slick-next {
   background: url(../images/svg/arrow-right-about.svg) 0 0/100% no-repeat;
-  right: 50px;
-}
-@media screen and (min-width: 414px) {
-  .slider-about .slick-arrow.slick-next {
-    right: 18px;
-  }
+  right: 18px;
 }
 @media screen and (min-width: 1024px) {
   .slider-about .slick-arrow.slick-next {
@@ -1415,14 +1647,17 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .details-rest {
   background-color: var(--first-color-fon);
-  padding-top: 0px;
+  padding: 0;
 }
 
 .container-details-rest {
   max-width: 414px;
+  height: 735px;
+  padding: 0;
+  padding-top: 24px;
+  padding-bottom: 40px;
   margin-right: auto;
   margin-left: auto;
-  padding: 24px 15px 40px;
   background: rgba(0, 0, 0, 0.65);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(./../images/homepage/restaurant-bg/restaurant-bg.jpg);
@@ -1438,7 +1673,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
 @media screen and (min-width: 1024px) {
   .container-details-rest {
     max-width: 1024px;
-    padding: 48px 47px 94px;
+    height: 620px;
+    padding-top: 48px;
+    padding-bottom: 96px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(./../images/homepage/restaurant-bg/restaurant-tab-bg.jpg);
   }
 }
@@ -1450,7 +1687,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 @media screen and (min-width: 1280px) {
   .container-details-rest {
     max-width: 1280px;
-    padding: 48px 85px 94px;
+    padding-bottom: 94px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(./../images/homepage/restaurant-bg/restaurant-desktop-bg.jpg);
   }
 }
@@ -1474,18 +1711,26 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
 }
 
-.details-rest__title {
+.details-rest__logo {
   font-family: "Film P3";
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
-  line-height: 1.075;
+  line-height: 1.08;
   letter-spacing: 0.3em;
+  text-transform: uppercase;
   color: var(--white-color);
   margin-bottom: 12px;
 }
+@media screen and (min-width: 1024px) {
+  .details-rest__logo {
+    margin-bottom: 16px;
+    font-size: 64px;
+    line-height: 1.08;
+  }
+}
 
-.details-rest__post-title {
+.details-rest__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
@@ -1493,68 +1738,61 @@ input[type=date]::-webkit-calendar-picker-indicator {
   color: #ffffff;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 1024px) {
+  .details-rest__title {
+    margin-bottom: 8px;
+    font-size: 24px;
+    line-height: 1.21;
+  }
+}
 
 .details-rest__text {
   font-weight: 600;
   font-size: 12px;
   line-height: 1.25;
   letter-spacing: 0.02em;
+  max-width: 243px;
   color: var(--second-text-color);
-  margin-bottom: 48px;
+  margin-bottom: 398px;
 }
 @media screen and (min-width: 1024px) {
   .details-rest__text {
-    width: 610px;
+    margin-bottom: 198px;
+    max-width: 610px;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .details-rest__text {
+    margin-bottom: 200px;
   }
 }
 
-.rest-buttons {
+.details-rest__buttons {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 @media screen and (min-width: 1024px) {
-  .rest-buttons {
-    display: block;
+  .details-rest__buttons {
+    align-items: start;
+    padding-left: 47px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .details-rest__buttons {
+    padding-left: 85px;
   }
 }
 
-.table-button {
+.details-rest__button-booking {
   margin-bottom: 16px;
 }
 
-.menu-button {
-  display: block;
-  padding: 12px 32px;
-  background: rgba(0, 0, 0, 0.4);
-  border: 2px solid var(--white-color);
-  border-radius: 25px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.02em;
+.details-rest__button-link {
   color: var(--accent-color);
-  transition: background-color var(--animation-link);
-}
-.menu-button:hover, .menu-button:focus {
-  background-color: var(--white-color);
-}
-@media screen and (min-width: 414px) {
-  .menu-button {
-    min-width: 236px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .menu-button {
-    max-width: 236px;
-    padding: 12px 30px;
-  }
-}
-
-.rest-slider-photo {
-  width: 270px;
 }
 
 .main-page-about-hotel {
@@ -1689,7 +1927,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   position: relative;
   margin-right: auto;
   left: -15px;
-  background: #dadada;
+  background: transparent;
   box-shadow: 2px 2px 60px 2px rgba(0, 0, 0, 0.25);
   border-radius: 2px;
 }
@@ -1765,6 +2003,159 @@ input[type=date]::-webkit-calendar-picker-indicator {
   .slider-about-left-position .slider-about__item {
     margin-left: 40px;
   }
+}
+
+.details-hotel {
+  background-color: var(--first-color-fon);
+  padding: 0;
+}
+
+.container-details-hotel {
+  max-width: 414px;
+  height: 735px;
+  padding: 0;
+  padding-top: 24px;
+  padding-bottom: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  background: rgba(0, 0, 0, 0.65);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(./../images/homepage/restaurant-bg/restaurant-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .container-details-hotel {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(./../images/homepage/restaurant-bg/restaurant-bg-2x.jpg);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container-details-hotel {
+    max-width: 1024px;
+    height: 620px;
+    padding-top: 48px;
+    padding-bottom: 100px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(./../images/homepage/restaurant-bg/restaurant-tab-bg.jpg);
+  }
+}
+@media screen and (min-width: 1024px) and (min-device-pixel-ratio: 2), screen and (min-width: 1024px) and (min-resolution: 192dpi), screen and (min-width: 1024px) and (min-resolution: 2dppx) {
+  .container-details-hotel {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(./../images/homepage/restaurant-bg/restaurant-tab-bg-2x.jpg);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container-details-hotel {
+    max-width: 1280px;
+    padding-bottom: 95px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(./../images/homepage/restaurant-bg/restaurant-desktop-bg.jpg);
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .container-details-hotel {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url(./../images/homepage/restaurant-bg/restaurant-desktop-bg-2x.jpg);
+  }
+}
+
+.details-hotel__logo {
+  font-family: "Film P3";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.08;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--white-color);
+  margin-bottom: 12px;
+  padding-left: 143px;
+}
+@media screen and (min-width: 1024px) {
+  .details-hotel__logo {
+    margin-bottom: 16px;
+    padding-left: 544px;
+    font-size: 64px;
+    line-height: 1.08;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .details-hotel__logo {
+    padding-left: 740px;
+  }
+}
+
+.details-hotel__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 20px;
+  padding-left: 201px;
+}
+@media screen and (min-width: 1024px) {
+  .details-hotel__title {
+    margin-bottom: 8px;
+    padding-left: 659px;
+    font-size: 24px;
+    line-height: 1.21;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .details-hotel__title {
+    padding-left: 855px;
+  }
+}
+
+.details-hotel__text {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  max-width: 243px;
+  color: var(--second-text-color);
+  margin-bottom: 398px;
+  padding-left: 32px;
+}
+@media screen and (min-width: 1024px) {
+  .details-hotel__text {
+    margin-bottom: 194px;
+    padding-left: 197px;
+    max-width: 746px;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .details-hotel__text {
+    padding-left: 347px;
+    max-width: 942px;
+  }
+}
+
+.details-hotel__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 1024px) {
+  .details-hotel__buttons {
+    align-items: end;
+    padding-right: 47px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .details-hotel__buttons {
+    padding-right: 86px;
+  }
+}
+
+.details-hotel__button-booking {
+  margin-bottom: 16px;
+}
+
+.details-hotel__button-link {
+  color: var(--accent-color);
 }
 
 .section-contacts {
@@ -2313,7 +2704,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   align-items: flex-start;
 }
 
-.slider-about {
+.slider-about-kitchen {
   margin-top: 32px;
   min-width: 0;
   width: calc(100% - 54px);
@@ -2326,7 +2717,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border-radius: 2px;
 }
 @media screen and (min-width: 1024px) {
-  .slider-about {
+  .slider-about-kitchen {
     width: 428px;
     margin: 0;
     margin-right: 15px;
@@ -2335,68 +2726,72 @@ input[type=date]::-webkit-calendar-picker-indicator {
   }
 }
 @media screen and (min-width: 1280px) {
-  .slider-about {
+  .slider-about-kitchen {
     position: absolute;
-    width: 548px;
-    height: 254px;
+    width: 530px;
+    height: 245px;
     top: 794px;
     right: 0;
   }
 }
-.slider-about .slick-arrow {
+.slider-about-kitchen .slick-arrow {
   position: absolute;
   top: 279px;
   width: 30px;
   height: 16px;
   background-size: contain;
 }
-.slider-about .slick-arrow.slick-prev {
+.slider-about-kitchen .slick-arrow.slick-prev {
   left: 220px;
   background: url(../images/svg/arrow-left-about.svg) 0 0/100% no-repeat;
 }
 @media screen and (min-width: 1024px) {
-  .slider-about .slick-arrow.slick-prev {
+  .slider-about-kitchen .slick-arrow.slick-prev {
     left: 334px;
     top: 242;
   }
 }
 @media screen and (min-width: 1280px) {
-  .slider-about .slick-arrow.slick-prev {
+  .slider-about-kitchen .slick-arrow.slick-prev {
     top: 302;
-    left: 445;
+    left: 435px;
     right: 103px;
   }
 }
-.slider-about .slick-arrow.slick-prev:hover, .slider-about .slick-arrow.slick-prev:focus-within {
+.slider-about-kitchen .slick-arrow.slick-prev:hover, .slider-about-kitchen .slick-arrow.slick-prev:focus-within {
   background-image: url(../images/svg/arrow-left-about-gold.svg);
 }
-.slider-about .slick-arrow.slick-next {
+.slider-about-kitchen .slick-arrow.slick-next {
   right: 18px;
   background: url(../images/svg/arrow-right-about.svg) 0 0/100% no-repeat;
 }
 @media screen and (min-width: 1024px) {
-  .slider-about .slick-arrow.slick-next {
+  .slider-about-kitchen .slick-arrow.slick-next {
     right: 0;
     top: 242;
   }
 }
 @media screen and (min-width: 1280px) {
-  .slider-about .slick-arrow.slick-next {
+  .slider-about-kitchen .slick-arrow.slick-next {
     top: 302;
     right: 9px;
   }
 }
-.slider-about .slick-arrow.slick-next:hover, .slider-about .slick-arrow.slick-next:focus-within {
+.slider-about-kitchen .slick-arrow.slick-next:hover, .slider-about-kitchen .slick-arrow.slick-next:focus-within {
   background-image: url(../images/svg/arrow-right-about-gold.svg);
 }
-.slider-about .slider-about__item {
+.slider-about-kitchen .slider-about__item {
   text-align: center;
   margin-right: 24px;
 }
 @media screen and (min-width: 1024px) {
-  .slider-about .slider-about__item {
+  .slider-about-kitchen .slider-about__item {
     margin-right: 40px;
   }
+}
+.slider-about-kitchen .slider-about__itempicture {
+  width: auto;
+  height: auto;
 }
 
 .menu__section {
@@ -3481,14 +3876,18 @@ input[type=date]::-webkit-calendar-picker-indicator {
 
 .background-image--double-lux {
   background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(././../images/hotel/bg/hotel-bg-min.jpg);
-  background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(././../images/hotel/bg/hotel-bg-tab-min.jpg);
 }
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .background-image--double-lux {
     background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(././../images/hotel/bg/hotel-bg-2x-min.jpg);
   }
 }
-@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media screen and (min-width: 1024px) {
+  .background-image--double-lux {
+    background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(././../images/hotel/bg/hotel-bg-tab-min.jpg);
+  }
+}
+@media screen and (min-width: 1024px) and (min-device-pixel-ratio: 2), screen and (min-width: 1024px) and (min-resolution: 192dpi), screen and (min-width: 1024px) and (min-resolution: 2dppx) {
   .background-image--double-lux {
     background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(././../images/hotel/bg/hotel-bg-tab-2x-min.jpg);
   }
@@ -3502,6 +3901,122 @@ input[type=date]::-webkit-calendar-picker-indicator {
 @media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
   .background-image--double-lux {
     background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(././../images/hotel/bg/hotel-bg-desktop-2x-min.jpg);
+  }
+}
+
+.background-image--double-lux1 {
+  background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(../images/rooms/room-mob-1-min.jpg);
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .background-image--double-lux1 {
+    background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(../images/rooms/room-mob-1-2x-min.jpg);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .background-image--double-lux1 {
+    background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(../images/rooms/empty-tablet-interrior-elements-decoration.jpg);
+  }
+}
+@media screen and (min-width: 1024px) and (min-device-pixel-ratio: 2), screen and (min-width: 1024px) and (min-resolution: 192dpi), screen and (min-width: 1024px) and (min-resolution: 2dppx) {
+  .background-image--double-lux1 {
+    background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(../images/rooms/empty-tablet-interrior-elements-decoration-@2x.jpg);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .background-image--double-lux1 {
+    background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(../images/rooms/room-desktop-1-min.jpg);
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .background-image--double-lux1 {
+    background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(../images/rooms/room-desktop-1-2x-min.jpg);
+  }
+}
+
+.background-image--double-lux2 {
+  background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(../images/rooms/room-mob-2-min.jpg);
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .background-image--double-lux2 {
+    background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(../images/rooms/room-mob-2-2x-min.jpg);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .background-image--double-lux2 {
+    background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(../images/rooms/empty-tablet-interrior-with-elements-decoration.jpg);
+  }
+}
+@media screen and (min-width: 1024px) and (min-device-pixel-ratio: 2), screen and (min-width: 1024px) and (min-resolution: 192dpi), screen and (min-width: 1024px) and (min-resolution: 2dppx) {
+  .background-image--double-lux2 {
+    background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(../images/rooms/empty-tablet-interrior-with-elements-decoration-2@2x.jpg);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .background-image--double-lux2 {
+    background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(../images/rooms/room-desktop-4-min.jpg);
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .background-image--double-lux2 {
+    background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(../images/rooms/room-desktop-4-2x-min.jpg);
+  }
+}
+
+.background-image--double-lux3 {
+  background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(../images/rooms/decor-mobile-3-min.jpg);
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .background-image--double-lux3 {
+    background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(../images/rooms/decor-mobile-3@2x.jpg);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .background-image--double-lux3 {
+    background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(././../images/hotel/bg/hotel-bg-tab-min.jpg);
+  }
+}
+@media screen and (min-width: 1024px) and (min-device-pixel-ratio: 2), screen and (min-width: 1024px) and (min-resolution: 192dpi), screen and (min-width: 1024px) and (min-resolution: 2dppx) {
+  .background-image--double-lux3 {
+    background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(././../images/hotel/bg/hotel-bg-tab-2x-min.jpg);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .background-image--double-lux3 {
+    background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(../images/rooms/room-desktop-5-min.jpg);
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .background-image--double-lux3 {
+    background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(../images/rooms/room-desktop-5-2x-min.jpg);
+  }
+}
+
+.background-image--double-lux4 {
+  background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(../images/rooms/room-mob-2-min.jpg);
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .background-image--double-lux4 {
+    background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(../images/rooms/room-mob-2-2x-min.jpg);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .background-image--double-lux4 {
+    background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(../images/rooms/empty-tablet-interrior-with-elements-decoration.jpg);
+  }
+}
+@media screen and (min-width: 1024px) and (min-device-pixel-ratio: 2), screen and (min-width: 1024px) and (min-resolution: 192dpi), screen and (min-width: 1024px) and (min-resolution: 2dppx) {
+  .background-image--double-lux4 {
+    background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(../images/rooms/empty-tablet-interrior-with-elements-decoration-2@2x.jpg);
+  }
+}
+@media screen and (min-width: 1280px) {
+  .background-image--double-lux4 {
+    background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(../images/rooms/room-desktop-3-min.jpg);
+  }
+}
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .background-image--double-lux4 {
+    background-image: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.55) 9.17%, rgba(0, 0, 0, 0) 50%), url(../images/rooms/room-desktop-3-2x-min.jpg);
   }
 }
 
@@ -3597,6 +4112,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   line-height: 1.14;
   letter-spacing: 0.05em;
   color: var(--white-color);
+  text-shadow: 1px 1px 2px #a17f7f, 0 0 1em #3e3e83, 0 0 0.2em #0606b7;
 }
 @media screen and (max-width: 1023px) {
   .hero-room__title {
@@ -3610,6 +4126,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
     line-height: 1.13;
   }
 }
+.hero-room__title--uppercase {
+  text-transform: uppercase;
+}
 
 .hero-room__upercase {
   text-transform: uppercase;
@@ -3622,6 +4141,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   letter-spacing: 0.02em;
   color: var(--white-color);
   max-width: 325px;
+  text-shadow: 1px 1px 2px #a17f7f, 0 0 1em #3e3e83, 0 0 0.2em #0606b7;
 }
 @media screen and (min-width: 1024px) {
   .hero-room__text {
