@@ -33,9 +33,12 @@
       url(./../images/homepage/restaurant-bg/restaurant-bg-2x.jpg);
   }
   @include tablet {
-    width: 1024px;
+    max-width: 1024px;
     height: 620px;
-    padding: 48px 47px 94px;
+
+    padding-top: 48px;
+    padding-bottom: 96px;
+
     background-image: linear-gradient(
         to right,
         rgba(0, 0, 0, 0.65),
@@ -55,7 +58,7 @@
   }
   @include desktop {
     max-width: 1280px;
-    padding: 48px 85px 94px;
+    padding-bottom: 94px;
     background-image: linear-gradient(
         to right,
         rgba(0, 0, 0, 0.65),
@@ -98,6 +101,11 @@
   color: var(--white-color);
 
   margin-bottom: 12px;
+  @include tablet {
+    margin-bottom: 16px;
+    font-size: 64px;
+    line-height: 1.08;
+  }
 }
 
 .details-rest__title {
@@ -109,6 +117,11 @@
   color: #ffffff;
 
   margin-bottom: 20px;
+  @include tablet {
+    margin-bottom: 8px;
+    font-size: 24px;
+    line-height: 1.21;
+  }
 }
 
 .details-rest__text {
@@ -117,14 +130,20 @@
   line-height: 1.25;
   letter-spacing: 0.02em;
 
-  width: 243px;
+  max-width: 243px;
 
   color: var(--second-text-color);
 
   margin-bottom: 398px;
 
   @include tablet {
-    width: 610px;
+    margin-bottom: 198px;
+    max-width: 610px;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+  @include desktop {
+    margin-bottom: 200px;
   }
 }
 
@@ -133,6 +152,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @include tablet {
+    align-items: start;
+    padding-left: 47px;
+  }
+  @include desktop {
+    padding-left: 85px;
+  }
 }
 
 .details-rest__button-booking {
