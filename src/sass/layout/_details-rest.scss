@@ -1,12 +1,16 @@
 .details-rest {
   background-color: var(--first-color-fon);
-  padding-top: 0px;
+  padding: 0;
 }
 .container-details-rest {
   max-width: 414px;
+  height: 735px;
+  padding: 0;
+  padding-top: 24px;
+  padding-bottom: 40px;
+
   margin-right: auto;
   margin-left: auto;
-  padding: 24px 15px 40px;
   background: rgba(0, 0, 0, 0.65);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   background-image: linear-gradient(
@@ -30,7 +34,11 @@
   }
   @include tablet {
     max-width: 1024px;
-    padding: 48px 47px 94px;
+    height: 620px;
+
+    padding-top: 48px;
+    padding-bottom: 96px;
+
     background-image: linear-gradient(
         to right,
         rgba(0, 0, 0, 0.65),
@@ -50,7 +58,7 @@
   }
   @include desktop {
     max-width: 1280px;
-    padding: 48px 85px 94px;
+    padding-bottom: 94px;
     background-image: linear-gradient(
         to right,
         rgba(0, 0, 0, 0.65),
@@ -80,20 +88,27 @@
   }
 }
 
-.details-rest__title {
+.details-rest__logo {
   font-family: 'Film P3';
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
-  line-height: 1.075;
+  line-height: 1.08;
   letter-spacing: 0.3em;
+
+  text-transform: uppercase;
 
   color: var(--white-color);
 
   margin-bottom: 12px;
+  @include tablet {
+    margin-bottom: 16px;
+    font-size: 64px;
+    line-height: 1.08;
+  }
 }
 
-.details-rest__post-title {
+.details-rest__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.2;
@@ -102,6 +117,11 @@
   color: #ffffff;
 
   margin-bottom: 20px;
+  @include tablet {
+    margin-bottom: 8px;
+    font-size: 24px;
+    line-height: 1.21;
+  }
 }
 
 .details-rest__text {
@@ -110,60 +130,45 @@
   line-height: 1.25;
   letter-spacing: 0.02em;
 
+  max-width: 243px;
+
   color: var(--second-text-color);
 
-  margin-bottom: 48px;
+  margin-bottom: 398px;
 
   @include tablet {
-    width: 610px;
+    margin-bottom: 198px;
+    max-width: 610px;
+    font-size: 16px;
+    line-height: 1.25;
+  }
+  @include desktop {
+    margin-bottom: 200px;
   }
 }
 
-.rest-buttons {
+.details-rest__buttons {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   @include tablet {
-    display: block;
+    align-items: start;
+    padding-left: 47px;
+  }
+  @include desktop {
+    padding-left: 85px;
   }
 }
 
-.table-button {
+.details-rest__button-booking {
   margin-bottom: 16px;
 }
 
-.menu-button {
-  display: block;
-  padding: 12px 32px;
-
-  background: rgba(0, 0, 0, 0.4);
-
-  border: 2px solid var(--white-color);
-  border-radius: 25px;
-
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.02em;
+.details-rest__button-link {
   color: var(--accent-color);
-
-  transition: background-color var(--animation-link);
-
-  &:hover,
-  &:focus {
-    background-color: var(--white-color);
-  }
-  @include mobile {
-    min-width: 236px;
-  }
-  @include tablet {
-    max-width: 236px;
-    padding: 12px 30px;
-  }
 }
 
-.rest-slider-photo {
-  width: 270px;
-}
+// .rest-slider-photo {
+//   width: 270px;
+// }
