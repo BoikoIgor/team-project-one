@@ -151,8 +151,9 @@
     left: 640px;
   }
 }
-.room-double__button a {
-  color: var(--accent-color);
+.room-double__button {
+  text-align: center;
+  padding: 14px 65px;
 }
 .room-double__button-wrap {
   padding-bottom: 32px;

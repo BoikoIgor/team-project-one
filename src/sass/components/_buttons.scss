@@ -5,7 +5,6 @@
   background: rgba(0, 0, 0, 0.4);
   border: 2px solid var(--white-color);
   border-radius: 25px;
-
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -33,7 +32,6 @@
 
 .button__dark {
   background: var(--text-menu-color);
-
   transition: border-color var(--animation-link);
 
   &:hover,

@@ -151,8 +151,9 @@
     left: 640px;
   }
 }
-.room-doublelux__button a {
-  color: var(--accent-color);
+.room-doublelux__button {
+  text-align: center;
+  padding: 14px 65px;
 }
 .room-doublelux__button-wrap {
   padding-bottom: 32px;

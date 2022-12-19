@@ -76,10 +76,15 @@
   font-size: 96px;
   line-height: 1.07;
   letter-spacing: 0.3em;
-  color: var(--white-color);
+  // color: var(--white-color);
+  color: transparent;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(to top, #fff 45%, rgba(0, 0, 0, 0.25));
   text-align: center;
   max-width: 303px;
-  
+
   @media screen and (max-width: 413px) {
     font-size: 87px;
   }

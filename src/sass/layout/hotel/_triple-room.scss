@@ -174,8 +174,9 @@
     left: 110px;
   }
 }
-.room-triple__button a {
-  color: var(--accent-color);
+.room-triple__button {
+  text-align: center;
+  padding: 14px 65px;
 }
 .room-triple__button-wrap {
   padding-bottom: 32px;
