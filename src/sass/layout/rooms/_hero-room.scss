@@ -361,7 +361,8 @@
   line-height: 1.14;
   letter-spacing: 0.05em;
   color: var(--white-color);
-  text-shadow: 1px 1px 2px #000000, 0 0 1em #000000, 0 0 0.2em #020202;
+  text-shadow: 1px 1px 2px var(--accent-color), 0 0 1em #000000,
+    0 0 0.2em #020202;
   @media screen and (max-width: 1023px) {
     max-width: 325px;
   }
@@ -385,7 +386,8 @@
   letter-spacing: 0.02em;
   color: var(--white-color);
   max-width: 325px;
-  text-shadow: 1px 1px 2px #000000, 0 0 1em #000000, 0 0 0.2em #020202;
+  text-shadow: 1px 1px 2px var(--accent-color), 0 0 1em #000000,
+    0 0 0.2em #020202;
 
   @include tablet {
     font-size: 16px;
@@ -394,7 +396,8 @@
 }
 
 .address--room {
-  text-shadow: 1px 1px 2px #000000, 0 0 1em #000000, 0 0 0.2em #020202;
+  text-shadow: 1px 1px 2px var(--accent-color), 0 0 1em #000000,
+    0 0 0.2em #020202;
   @include tablet {
     margin-right: 41px;
   }

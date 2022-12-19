@@ -1,18 +1,18 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 :root {
-  --first-color-fon:#FFFDEE;
-  --secondary-color-fon:#F0ECD6;
-  --footer-color-fon: #0E0C07;
+  --first-color-fon: #fffdee;
+  --secondary-color-fon: #f0ecd6;
+  --footer-color-fon: #0e0c07;
   --second-logo-color: #828282;
-  --accent-color: #F3C653;
-  --second-accent-color: #C79002;
+  --accent-color: #f3c653;
+  --second-accent-color: #c79002;
   --main-title-color: #000000;
-  --main-text-color: #5F5F5F;
-  --hotel-text-color: #7A7A7A;
-  --second-text-color: #BABABA;
-  --pre-title-text-color: #B4B4B4;
+  --main-text-color: #5f5f5f;
+  --hotel-text-color: #7a7a7a;
+  --second-text-color: #bababa;
+  --pre-title-text-color: #b4b4b4;
   --text-menu-color: #000000;
-  --white-color: #FFFFFF;
+  --white-color: #ffffff;
   --placeholder-color: #808080;
   --shadow: 5px 5px 70px 17px rgba(0, 0, 0, 0.25);
   --gradient: rgba(0, 0, 0, 0.65);
@@ -4122,7 +4122,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   line-height: 1.14;
   letter-spacing: 0.05em;
   color: var(--white-color);
-  text-shadow: 1px 1px 2px #000000, 0 0 1em #000000, 0 0 0.2em #020202;
+  text-shadow: 1px 1px 2px var(--accent-color), 0 0 1em #000000, 0 0 0.2em #020202;
 }
 @media screen and (max-width: 1023px) {
   .hero-room__title {
@@ -4151,7 +4151,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   letter-spacing: 0.02em;
   color: var(--white-color);
   max-width: 325px;
-  text-shadow: 1px 1px 2px #000000, 0 0 1em #000000, 0 0 0.2em #020202;
+  text-shadow: 1px 1px 2px var(--accent-color), 0 0 1em #000000, 0 0 0.2em #020202;
 }
 @media screen and (min-width: 1024px) {
   .hero-room__text {
@@ -4161,7 +4161,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .address--room {
-  text-shadow: 1px 1px 2px #000000, 0 0 1em #000000, 0 0 0.2em #020202;
+  text-shadow: 1px 1px 2px var(--accent-color), 0 0 1em #000000, 0 0 0.2em #020202;
 }
 @media screen and (min-width: 1024px) {
   .address--room {
